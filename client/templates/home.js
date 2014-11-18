@@ -1,13 +1,6 @@
-'use strict';
-(function ($) {
+Template.home.rendered = function() {
 
-	//new WOW().init();
-
-	jQuery(window).load(function() { 
-		jQuery('#preloader').delay(100).fadeOut('slow');
-		jQuery('#load').delay(100).fadeOut('slow');
-	});
-
+	$('body').scrollspy({target: '.navbar-custom'});
 
 	//jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {
@@ -35,5 +28,4 @@
 			event.preventDefault();
 		});
 	});
-
-})(jQuery);
+}
