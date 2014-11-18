@@ -152,6 +152,7 @@ a:focus {
   background-color: rgba(255,255,255,.2);
 }
 
+
 .navbar-toggle {
   padding: 4px 6px;
   font-size: 14px;
@@ -619,3 +620,4 @@ footer {
   background-color: #67b0d1;
   border-color: #67b0d1;
 }
+
