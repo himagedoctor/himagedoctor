@@ -31,7 +31,13 @@ Template.home.rendered = function() {
 		});
 
 //jssor slider
-	var options = { $AutoPlay: true };
+	var options = { 
+		$AutoPlay: true,
+		$ArrowNavigatorOptions: {
+      $Class: $JssorArrowNavigator$,
+      $ChanceToShow: 2
+    }
+	};
 	var jssorSlider1 = new $JssorSlider$('training_container', options);
 	var jssorSlider2 = new $JssorSlider$('clinic_container', options);
 	//responsive code begin

@@ -4,9 +4,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 mizzao:bootstrap-3
 mrt:jquery-easing
 natestrauser:jquery-scrollto
 iron:router
+ryw:blog
