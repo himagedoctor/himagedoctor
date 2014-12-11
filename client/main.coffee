@@ -1,4 +1,4 @@
 if Meteor.isClient
   Blog.config
-    blogIndexTemplate: 'blog' # '/blog' route
-    #blogShowTemplate: 'myShowBlogTemplate'   # '/blog/:slug' route
+    blogIndexTemplate: 'blogs' # '/blog' route
+    blogShowTemplate: 'blog'   # '/blog/:slug' route

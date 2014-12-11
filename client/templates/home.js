@@ -1,5 +1,5 @@
 Template.home.rendered = function() {
-
+	/******* scroll page ********/
 	$('body').scrollspy({target: '.navbar-custom'});
 
 	//jQuery to collapse the navbar on scroll	
@@ -11,32 +11,31 @@ Template.home.rendered = function() {
 		}
 	});
 
-
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	this.$('.navbar-nav li a').bind('click', function(event) {
-			var anchor = $(this).attr('href');
-			if(anchor !== '#') {
-				$('html, body').stop().animate({
-					scrollTop: $(anchor).offset().top
-				}, 1500, 'easeInOutExpo');
-			}
-			event.preventDefault();
-		});
-	this.$('.page-scroll a').bind('click', function(event) {
-			var $anchor = $(this);
+		var anchor = $(this).attr('href');
+		if(anchor !== '#') {
 			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
+				scrollTop: $(anchor).offset().top
 			}, 1500, 'easeInOutExpo');
-			event.preventDefault();
-		});
+		}
+		event.preventDefault();
+	});
+	this.$('.page-scroll a').bind('click', function(event) {
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $($anchor.attr('href')).offset().top
+		}, 1500, 'easeInOutExpo');
+		event.preventDefault();
+	});
 
-//jssor slider
+	/****** jssor slider *************/
 	var options = { 
 		$AutoPlay: true,
 		$ArrowNavigatorOptions: {
-      $Class: $JssorArrowNavigator$,
-      $ChanceToShow: 2
-    }
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow: 2
+		}
 	};
 	var jssorSlider1 = new $JssorSlider$('training_container', options);
 	var jssorSlider2 = new $JssorSlider$('clinic_container', options);
@@ -61,9 +60,97 @@ Template.home.rendered = function() {
     }
   //responsive code end
 
-  //baidu map
+  /*********** accounts ui bootstrap3 **********/
+  accountsUIBootstrap3.setLanguage('zh');
+
+  accountsUIBootstrap3.map('zh', {
+  	resetPasswordDialog: {
+  		title: "Reset your password",
+  		newPassword: "New password",
+  		cancel: "Cancel",
+  		submit: "Set password"
+  	},
+  	enrollAccountDialog: {
+  		title: "Choose a password",
+  		newPassword: "New password",
+  		cancel: "Close",
+  		submit: "Set password"
+  	},
+  	justVerifiedEmailDialog: {
+  		verified: "Email address verified",
+  		dismiss: "Dismiss"
+  	},
+  	loginButtonsMessagesDialog: {
+  		dismiss: "Dismiss",
+  	},
+  	loginButtonsLoggedInDropdownActions: {
+  		password: "修改密码",
+  		signOut: "退出"
+  	},
+  	loginButtonsLoggedOutDropdown: {
+  		signIn: "登录",
+  		up: "注册"
+  	},
+  	loginButtonsLoggedOutPasswordServiceSeparator: {
+  		or: "or"
+  	},
+  	loginButtonsLoggedOutPasswordService: {
+  		create: "注册",
+  		signIn: "登录",
+  		forgot: "忘记密码?",
+  		createAcc: "注册加入"
+  	},
+  	forgotPasswordForm: {
+  		email: "Email",
+  		reset: "Reset password",
+  		sent: "Email sent"
+  	},
+  	loginButtonsBackToLoginLink: {
+  		back: "Cancel"
+  	},
+  	loginButtonsChangePassword: {
+  		submit: "Change password",
+  		cancel: "Cancel"
+  	},
+  	loginButtonsLoggedOutSingleLoginButton: {
+  		signInWith: "Sign in with",
+  		configure: "Configure",
+  	},
+  	loginButtonsLoggedInSingleLogoutButton: {
+  		signOut: "Sign out"
+  	},
+  	loginButtonsLoggedOut: {
+  		noLoginServices: "No login services configured"
+  	},
+  	loginFields: {
+  		usernameOrEmail: "Username or Email",
+  		username: "Username",
+  		email: "Email",
+  		password: "Password"
+  	},
+  	signupFields: {
+  		username: "Username",
+  		email: "Email",
+  		emailOpt: "Email (optional)",
+  		password: "Password",
+  		passwordAgain: "Password (again)"
+  	},
+  	changePasswordFields: {
+  		currentPassword: "Current Password",
+  		newPassword: "New Password",
+  		newPasswordAgain: "New Password (again)"
+  	},
+  	errorMessages: {
+  		usernameTooShort: "Username must be at least 3 characters long",
+  		invalidEmail: "Invalid email",
+  		passwordTooShort: "Password must be at least 6 characters long",
+  		passwordsDontMatch: "Passwords don't match"
+  	}
+  });
+
+/*********** baidu map ************/
   //创建和初始化地图函数：
-    function initMap(){
+  function initMap(){
         createMap();//创建地图
         setMapEvent();//设置地图事件
         addMapControl();//向地图添加控件
@@ -104,59 +191,59 @@ Template.home.rendered = function() {
     ];
     //创建marker
     function addMarker(){
-      for (var i = 0; i < markerArr.length; i++) {  
-        var json = markerArr[i];
-        var p0 = json.point.split("|")[0];
-        var p1 = json.point.split("|")[1];
-        var point = new BMap.Point(p0,p1);
-        var iconImg = createIcon(json.icon);
-        var marker = new BMap.Marker(point,{icon:iconImg});
-        var iw = createInfoWindow(i);
-        var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
-        marker.setLabel(label);
-        map.addOverlay(marker);
-        label.setStyle({
-          borderColor:"#808080",
-          color:"#333",
-          cursor:"pointer"
-        });
+    	for (var i = 0; i < markerArr.length; i++) {  
+    		var json = markerArr[i];
+    		var p0 = json.point.split("|")[0];
+    		var p1 = json.point.split("|")[1];
+    		var point = new BMap.Point(p0,p1);
+    		var iconImg = createIcon(json.icon);
+    		var marker = new BMap.Marker(point,{icon:iconImg});
+    		var iw = createInfoWindow(i);
+    		var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+    		marker.setLabel(label);
+    		map.addOverlay(marker);
+    		label.setStyle({
+    			borderColor:"#808080",
+    			color:"#333",
+    			cursor:"pointer"
+    		});
 
-        (function(){
-          var index = i;
-          var _iw = createInfoWindow(i);
-          var _marker = marker;
-          _marker.addEventListener("click",function(){
-            this.openInfoWindow(_iw);
-          });
-          _iw.addEventListener("open",function(){
-            _marker.getLabel().hide();
-          })
-          _iw.addEventListener("close",function(){
-            _marker.getLabel().show();
-          })
-          label.addEventListener("click",function(){
-            _marker.openInfoWindow(_iw);
-          })
-          if(!!json.isOpen){
-            label.hide();
-            _marker.openInfoWindow(_iw);
-          }
-        })()
-      }
+    		(function(){
+    			var index = i;
+    			var _iw = createInfoWindow(i);
+    			var _marker = marker;
+    			_marker.addEventListener("click",function(){
+    				this.openInfoWindow(_iw);
+    			});
+    			_iw.addEventListener("open",function(){
+    				_marker.getLabel().hide();
+    			})
+    			_iw.addEventListener("close",function(){
+    				_marker.getLabel().show();
+    			})
+    			label.addEventListener("click",function(){
+    				_marker.openInfoWindow(_iw);
+    			})
+    			if(!!json.isOpen){
+    				label.hide();
+    				_marker.openInfoWindow(_iw);
+    			}
+    		})()
+    	}
     }
     //创建InfoWindow
     function createInfoWindow(i){
-      var json = markerArr[i];
-      var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
-      return iw;
+    	var json = markerArr[i];
+    	var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+    	return iw;
     }
     //创建一个Icon
     function createIcon(json){
-      var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
-      return icon;
+    	var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+    	return icon;
     }
     
     initMap();//创建和初始化地图
 
-};
+  };
 

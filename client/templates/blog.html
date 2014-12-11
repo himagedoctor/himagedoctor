@@ -1,29 +1,58 @@
 <template name="blog">
-   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-          <i class="fa fa-bars"></i>
-        </button>
-        <a class="navbar-brand" href="/">
-          <h1>仁美仁爱</h1>
-        </a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/">首页</a></li>
-          <li class="active"><a href="/blog">博客</a></li>
-          {{> loginButtons}} 
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
+ <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+      <a class="navbar-brand" href="/">
+        <h1>仁美仁爱</h1>
+      </a>
     </div>
-    <!-- /.container -->
-  </nav>
 
-  <section id="blogs" class="home-section">
-    {{> blogIndex}}
-  </section>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">首页</a></li>
+        <li class="active"><a href="/blog">医学文章</a></li>
+        {{#if isInRole 'admin' 'staff' 'faculty' 'nurse' 'blogAdmin'}}
+          <li><a href="http://mail.himagedoctor.com">员工邮箱</a></li>
+          <li><a href="https://www.icloud.com/">员工月历</a></li>
+        {{/if}}
+        {{> loginButtons}} 
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<section id="blog" class="home-section">
+  {{#if currentUser}}
+  <div id="meteor-blog" class="blog-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-8 col-md-offset-2">
+          <article class="post">
+            <h2>{{title}}</h2>
+            <div class="post-meta">
+              作者: {{authorName}} 发表日期: {{blogFormatDate publishedAt}}
+              {{> blogTags }}
+            </div>
+            <div id="commentable-area" class="the-content">
+              {{{html}}}
+            </div>
+          </article>
+          <div class="blog-back-link pull-left">
+            <a href="{{pathFor 'blogIndex'}}"><i class="fa fa-caret-left"></i>返回</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <div class="alert alert-warning" role="alert">请注册登录就能看全部医学文章</div>
+
+  {{/if}}
+</section>
 </template>

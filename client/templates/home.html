@@ -23,10 +23,15 @@
             <li><a href="#training">全科培训</a></li>
             <li><a href="#faculty">师资介绍</a></li>                 
             <li><a href="#clinic">国际门诊</a></li>
-            <li><a href="#">连锁门诊</a></li>
-            <li><a href="/blog">最新消息</a></li>
+            <li><a href="/blog">医学文章</a></li>
+            <li><a href="#news">最新消息</a></li>
+            {{#if isInRole 'admin' 'staff' 'faculty' 'nurse' 'blogAdmin'}}
+              <li><a href="http://mail.himagedoctor.com">员工邮箱</a></li>
+              <li><a href="https://www.icloud.com/">员工月历</a></li>
+            {{/if}}
           </ul>
-        </li>       
+        </li>  
+        {{> loginButtons}}     
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -73,241 +78,246 @@
     <div class="row">
       <div class="col-lg-12">
         <p>美国仁美医疗中心是一个外资医疗机构，总部位于美国俄克拉荷马州图尔萨市。2002年进驻中国辽宁沈阳，致力于全科医生培训、国际连锁门诊、慈善医疗援助，孤儿家庭助养，HIV患者的服务及临终关怀项目。仁美国际医疗团队由来自中国、美国、加拿大、德国、塞拉利昂、挪威等国的医务人员组成。自2005年至今，每年帮助首都医科大学进行全国师资培训。先后在上海、广州、南京、杭州、郑州、长春、大连、锦州等地开展了全科培训工作。并与本地中国医科大学附属医院、辽宁省医院、沈阳市妇婴医院等大型综合性医院联合培养全科医生。创建至今，我们在柬埔寨、巴基斯坦、印度尼西亚、埃及等国家共进行10次国际医疗援助活动。曾为国内30多个偏远地区提供慈善医疗服务，并定向为11家养老院和5家福利院提供慈善医疗服务。
-        </p>             
+        </p>   
+        <video width="640" height="360" controls>
+          <source src="http://www.gracedimension.com/clinic.mov" type="video/mp4">
+
+            Your browser does not support the video tag.
+          </video>          
+        </div>
+      </div>
+    </div>    
+  </section>
+  <!-- /Section: about -->
+
+
+  <!-- Section: services -->
+  <section id="service" class="home-section text-center bg-gray">
+
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+
+            <div class="section-heading">
+              <h2>服务项目</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
-  </div>    
-</section>
-<!-- /Section: about -->
-
-
-<!-- Section: services -->
-<section id="service" class="home-section text-center bg-gray">
-
-  <div class="heading-about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
 
-          <div class="section-heading">
-            <h2>服务项目</h2>
-            <i class="fa fa-2x fa-angle-down"></i>
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fa fa-2x fa-graduation-cap"></i>
+            </div>
+            <div class="service-desc">
+              <h3>全科培训</h3>
+
+              <p>由美国CMDA医师协会提供专业全科师资教学</p>
+              <p>外籍医师一对一指导教学</p>
+              <p>三甲级医院科室轮转</p>
+              <p>短期国际门诊进修学习</p>
+              <p>全国医学会议培训</p>
+              <p>培训优秀者有机会出国学习</p>
+              <p>参与仁美每年的国际医疗援助活动</p>
+              <p>国内偏远地区及福利院、养老院义诊</p>
+              <p>医疗英语培训学习</p>
+
+            </div>
           </div>
 
+        </div>
+        <div class="col-sm-3 col-md-3">
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fa fa-2x fa-line-chart"></i>
+            </div>
+            <div class="service-desc">
+              <h3>毕业生的发展与就业</h3>
+              <p>
+                在仁美连锁门诊从事医生或管理工作
+              </p>
+              <p>推荐参加美国全科住院医生培训项目，考取美国医生执照</p>
+              <p>推荐到国际门诊或医院工作（例如，环球医生国际门诊，和睦家医院等）</p>
+              <p>推荐到外国驻中国领事馆或国际企业驻厂医生</p>
+              <p>国际旅行团队及国际保险企业的责任医生及医疗顾问</p>
+              <p>综合医院全科诊室工作</p>
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fa fa-2x fa-heart"></i>
+            </div>
+            <div class="service-desc">
+              <h3>慈善工作</h3>
+
+              <p>爱心慈善医疗，包括农村、养老院、福利院义诊，国外义诊，国内及国际医疗救援</p>
+              <p>慈善门诊为特殊人群及经济困难患者减免医疗费用</p>
+              <p>为助养孤儿减免医疗费用</p>
+              <p>为临终患者提供生活照顾及免费医疗服务</p>                
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-3 col-md-3">
+
+          <div class="service-box">
+            <div class="service-icon">
+              <i class="fa fa-2x fa-plus-square"></i>
+            </div>
+            <div class="service-desc">
+              <h3>国际门诊</h3>
+
+              <p>全科医疗,心理咨询，急，重症转诊住院全程陪同服务</p>
+              <p>可以提供基于英、法、德、日、汉、西班牙语的医疗服务</p>
+              <p>美国 CMDA 协会提供技术支持，进行跨国网络会诊</p>
+              <p>24小时电话预约挂号</p>
+              <p>提供英文检查报告、制作英文体检报告、出具英文医疗证明</p>
+              <p>定期开展健康堂</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </section>
+  <!-- /Section: services -->
+
+
+
+
+  <!-- Section: contact -->
+  <section id="contact" class="home-section text-center">
+    <div class="heading-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="section-heading">
+              <h2>联系我们</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-5">
-        <hr class="marginbot-50">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-3 col-md-3">
-
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-2x fa-graduation-cap"></i>
-          </div>
-          <div class="service-desc">
-            <h3>全科培训</h3>
-
-            <p>由美国CMDA医师协会提供专业全科师资教学</p>
-            <p>外籍医师一对一指导教学</p>
-            <p>三甲级医院科室轮转</p>
-            <p>短期国际门诊进修学习</p>
-            <p>全国医学会议培训</p>
-            <p>培训优秀者有机会出国学习</p>
-            <p>参与仁美每年的国际医疗援助活动</p>
-            <p>国内偏远地区及福利院、养老院义诊</p>
-            <p>医疗英语培训学习</p>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="col-sm-3 col-md-3">
-
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-2x fa-line-chart"></i>
-          </div>
-          <div class="service-desc">
-            <h3>毕业生的发展与就业</h3>
-            <p>
-              在仁美连锁门诊从事医生或管理工作
-            </p>
-            <p>推荐参加美国全科住院医生培训项目，考取美国医生执照</p>
-            <p>推荐到国际门诊或医院工作（例如，环球医生国际门诊，和睦家医院等）</p>
-            <p>推荐到外国驻中国领事馆或国际企业驻厂医生</p>
-            <p>国际旅行团队及国际保险企业的责任医生及医疗顾问</p>
-            <p>综合医院全科诊室工作</p>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="col-sm-3 col-md-3">
-
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-2x fa-heart"></i>
-          </div>
-          <div class="service-desc">
-            <h3>慈善工作</h3>
-
-            <p>爱心慈善医疗，包括农村、养老院、福利院义诊，国外义诊，国内及国际医疗救援</p>
-            <p>慈善门诊为特殊人群及经济困难患者减免医疗费用</p>
-            <p>为助养孤儿减免医疗费用</p>
-            <p>为临终患者提供生活照顾及免费医疗服务</p>                
-          </div>
-        </div>
-
-      </div>
-      <div class="col-sm-3 col-md-3">
-
-        <div class="service-box">
-          <div class="service-icon">
-            <i class="fa fa-2x fa-plus-square"></i>
-          </div>
-          <div class="service-desc">
-            <h3>国际门诊</h3>
-
-            <p>全科医疗,心理咨询，急，重症转诊住院全程陪同服务</p>
-            <p>可以提供基于英、法、德、日、汉、西班牙语的医疗服务</p>
-            <p>美国 CMDA 协会提供技术支持，进行跨国网络会诊</p>
-            <p>24小时电话预约挂号</p>
-            <p>提供英文检查报告、制作英文体检报告、出具英文医疗证明</p>
-            <p>定期开展健康堂</p>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>    
-</section>
-<!-- /Section: services -->
-
-
-
-
-<!-- Section: contact -->
-<section id="contact" class="home-section text-center">
-  <div class="heading-contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="section-heading">
-            <h2>联系我们</h2>
-            <i class="fa fa-2x fa-angle-down"></i>
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+
+          <!--引用百度地图API-->
+          <style type="text/css">
+          .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+          .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+          </style>
+
+
+          <!--百度地图容器-->
+          <div style="width:500px;height:300px;border:#ccc solid 1px;" id="dituContent"></div>
+
+
+
+
+          <!--          <img src="images/map.jpg" class="img-responsive"> -->
+        </div>
+
+        <div class="col-lg-3">
+          <div class="widget-contact">
+            <address>
+              <h4>仁美仁爱国际门诊</h4>
+              沈阳市大东区滂江街54号<br>
+              沈阳市德济医院1楼VIP门诊<br>
+              <abbr title="Phone">电话预约就诊</abbr> 400-024-7120
+            </address>
+
+            <address>
+              <strong>电邮箱</strong><br>
+              <a href="mailto:#">clinic@himagedoctor.com</a>
+            </address>           
+          </div>  
+        </div>
+        <div class="col-lg-3">
+          <div class="widget-contact">
+            <address>
+              <strong>微信</strong><br>
+              <img src="images/qrcode.jpg">
+            </address>
+          </div> 
+        </div>
+      </div>  
+
+    </div>
+  </section>
+  <!-- /Section: contact -->
+
+
+  <!-- Section: training -->
+  <section id="training" class="home-section text-center bg-gray">
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="section-heading">
+              <h2>全科培训</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-5">
-        <hr class="marginbot-50">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-6">
-
-        <!--引用百度地图API-->
-        <style type="text/css">
-        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-        .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-        </style>
-        
-
-        <!--百度地图容器-->
-        <div style="width:500px;height:300px;border:#ccc solid 1px;" id="dituContent"></div>
-
-   
-
-
-    <!--          <img src="images/map.jpg" class="img-responsive"> -->
-  </div>
-
-  <div class="col-lg-3">
-    <div class="widget-contact">
-      <address>
-        <h4>仁美仁爱国际门诊</h4>
-        沈阳市大东区滂江街54号<br>
-        沈阳市德济医院1楼VIP门诊<br>
-        <abbr title="Phone">电话预约就诊</abbr> 400-024-7120
-      </address>
-
-      <address>
-        <strong>电邮箱</strong><br>
-        <a href="mailto:#">clinic@himagedoctor.com</a>
-      </address>           
-    </div>  
-  </div>
-  <div class="col-lg-3">
-    <div class="widget-contact">
-      <address>
-        <strong>微信</strong><br>
-        <img src="images/qrcode.jpg">
-      </address>
-    </div> 
-  </div>
-</div>  
-
-</div>
-</section>
-<!-- /Section: contact -->
-
-
-<!-- Section: training -->
-<section id="training" class="home-section text-center bg-gray">
-  <div class="heading-about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="section-heading">
-            <h2>全科培训</h2>
-            <i class="fa fa-2x fa-angle-down"></i>
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div id="training_container" class="slider-container">
+          <!-- Slides Container -->
+          <div u="slides" class="slider">
+            <div><img u="image" src="images/clinic/doctors.jpg" /></div>
+            <div><img u="image" src="images/training/training1.jpg" /></div>
+            <div><img u="image" src="images/training/training2.jpg" /></div>
+            <div><img u="image" src="images/training/training3.jpg" /></div>
+            <div><img u="image" src="images/training/training4.jpg" /></div>
+            <div><img u="image" src="images/training/training5.jpg" /></div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-5">
-        <hr class="marginbot-50">
-      </div>
-    </div>
-    <div class="row">
-      <div id="training_container" class="slider-container">
-        <!-- Slides Container -->
-        <div u="slides" class="slider">
-          <div><img u="image" src="images/clinic/doctors.jpg" /></div>
-          <div><img u="image" src="images/training/training1.jpg" /></div>
-          <div><img u="image" src="images/training/training2.jpg" /></div>
-          <div><img u="image" src="images/training/training3.jpg" /></div>
-          <div><img u="image" src="images/training/training4.jpg" /></div>
-          <div><img u="image" src="images/training/training5.jpg" /></div>
-        </div>
 
-        <!-- Arrow Navigator Skin Begin -->
+          <!-- Arrow Navigator Skin Begin -->
 
-        <!-- Arrow Left -->
-        <span u="arrowleft" class="jssora01l"
-        style="width: 55px; height: 55px; top: 122px; left: 8px;">
+          <!-- Arrow Left -->
+          <span u="arrowleft" class="jssora01l"
+          style="width: 55px; height: 55px; top: 122px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora01r"
+        style="width: 55px; height: 55px; top: 122px; right: 8px;">
       </span>
-      <!-- Arrow Right -->
-      <span u="arrowright" class="jssora01r"
-      style="width: 55px; height: 55px; top: 122px; right: 8px;">
-    </span>
-    <!-- Arrow Navigator Skin End -->
+      <!-- Arrow Navigator Skin End -->
 
-  </div>
-</div>       
+    </div>
+  </div>       
 </div>    
 
 </section>
@@ -498,8 +508,10 @@
       </div>
     </div>
     <div class="row">
+      <!-- Slides Container  -->
+
       <div id="clinic_container" class="slider-container">
-        <!-- Slides Container -->
+
         <div u="slides" class="slider">
           <div><img u="image" src="images/clinic/doctors.jpg" /></div>
           <div><img u="image" src="images/clinic/front_desk.jpg" /></div>
@@ -510,17 +522,23 @@
 
         <!-- Arrow Navigator Skin Begin -->
 
-        <!-- Arrow Left -->
+        <!-- Arrow Left  -->
         <span u="arrowleft" class="jssora01l"
         style="width: 55px; height: 55px; top: 122px; left: 8px;">
       </span>
+
       <!-- Arrow Right -->
       <span u="arrowright" class="jssora01r"
       style="width: 55px; height: 55px; top: 122px; right: 8px;">
     </span>
-    <!-- Arrow Navigator Skin End -->
 
   </div>
+  
+  <!-- Arrow Navigator Skin End -->
+
+
+
+
 </div>       
 </div>    
 

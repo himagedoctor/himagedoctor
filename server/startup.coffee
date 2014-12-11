@@ -1,9 +1,18 @@
 Meteor.startup ->
-  
-  # bootstrap the admin user if they exist
-  Roles.addUsersToRoles "TfSk7GEi6Hs7NpHxn", ["admin", "blogAdmin"]  if Meteor.users.findOne("TfSk7GEi6Hs7NpHxn")
-  
   # create roles 
+  Roles.createRole "staff"  unless Meteor.roles.findOne(name: "staff")
   Roles.createRole "blogAdmin"  unless Meteor.roles.findOne(name: "blogAdmin")
   Roles.createRole "blogAuthor"  unless Meteor.roles.findOne(name: "blogAuthor")
+  
+  # bootstrap the admin user if they exist
+	admin = Meteor.users.findOne(email: 'johannchen@gmail.com')
+	if admin is null
+		id = Accounts.createUser(
+			email: 'johannchen@gmail.com'
+			password: 'changeme2014'
+			profile:
+				name: 'Johann Chen'
+		)
+		Roles.addUsersToRoles id, ["admin", "blogAdmin", "staff"]
+  
   return
