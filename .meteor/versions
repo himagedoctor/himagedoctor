@@ -39,6 +39,7 @@ iron:middleware-stack@1.0.3
 iron:router@1.0.3
 iron:url@1.0.3
 joshowens:shareit@0.2.0
+joshowens:simple-form@0.2.2
 jquery@1.0.1
 json@1.0.1
 kaptron:minimongoid@0.9.1
@@ -71,6 +72,7 @@ reload@1.1.1
 retry@1.0.1
 routepolicy@1.0.2
 ryw:blog@0.6.0
+schnie:uploader@2.0.3
 service-configuration@1.0.2
 session@1.0.4
 sha@1.0.1

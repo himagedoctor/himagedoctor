@@ -25,9 +25,12 @@
             <li><a href="#clinic">国际门诊</a></li>
             <li><a href="/blog">医学文章</a></li>
             <li><a href="#news">最新消息</a></li>
-            {{#if isInRole 'admin' 'staff' 'faculty' 'nurse' 'blogAdmin'}}
-              <li><a href="http://mail.himagedoctor.com">员工邮箱</a></li>
-              <li><a href="https://www.icloud.com/">员工月历</a></li>
+            {{#if currentUser}}
+              {{#if isInRole 'admin' 'staff' 'faculty' 'nurse' 'blogAdmin'}}
+                <li><a href="http://mail.himagedoctor.com">员工邮箱</a></li>
+                <li><a href="https://www.icloud.com/">员工月历</a></li>
+              {{/if}}
+              <li><a href="/profile">个人资料</a></li>
             {{/if}}
           </ul>
         </li>  
