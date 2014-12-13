@@ -14,5 +14,11 @@ Meteor.startup ->
 				name: 'Johann Chen'
 		)
 		Roles.addUsersToRoles id, ["admin", "blogAdmin", "staff"]
+
+	unless Sections.findOne(name: "news")
+		Sections.insert
+			name: 'news'
+			content: 'news update here'
+		
   
   return

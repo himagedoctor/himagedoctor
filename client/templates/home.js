@@ -60,95 +60,10 @@ Template.home.rendered = function() {
     }
   //responsive code end
 
-  /*********** accounts ui bootstrap3 **********/
-  accountsUIBootstrap3.setLanguage('zh');
-
-  accountsUIBootstrap3.map('zh', {
-  	resetPasswordDialog: {
-  		title: "Reset your password",
-  		newPassword: "New password",
-  		cancel: "Cancel",
-  		submit: "Set password"
-  	},
-  	enrollAccountDialog: {
-  		title: "Choose a password",
-  		newPassword: "New password",
-  		cancel: "Close",
-  		submit: "Set password"
-  	},
-  	justVerifiedEmailDialog: {
-  		verified: "Email address verified",
-  		dismiss: "Dismiss"
-  	},
-  	loginButtonsMessagesDialog: {
-  		dismiss: "Dismiss",
-  	},
-  	loginButtonsLoggedInDropdownActions: {
-  		password: "修改密码",
-  		signOut: "退出"
-  	},
-  	loginButtonsLoggedOutDropdown: {
-  		signIn: "登录",
-  		up: "注册"
-  	},
-  	loginButtonsLoggedOutPasswordServiceSeparator: {
-  		or: "or"
-  	},
-  	loginButtonsLoggedOutPasswordService: {
-  		create: "注册",
-  		signIn: "登录",
-  		forgot: "忘记密码?",
-  		createAcc: "注册加入"
-  	},
-  	forgotPasswordForm: {
-  		email: "Email",
-  		reset: "Reset password",
-  		sent: "Email sent"
-  	},
-  	loginButtonsBackToLoginLink: {
-  		back: "Cancel"
-  	},
-  	loginButtonsChangePassword: {
-  		submit: "Change password",
-  		cancel: "Cancel"
-  	},
-  	loginButtonsLoggedOutSingleLoginButton: {
-  		signInWith: "Sign in with",
-  		configure: "Configure",
-  	},
-  	loginButtonsLoggedInSingleLogoutButton: {
-  		signOut: "Sign out"
-  	},
-  	loginButtonsLoggedOut: {
-  		noLoginServices: "No login services configured"
-  	},
-  	loginFields: {
-  		usernameOrEmail: "Username or Email",
-  		username: "Username",
-  		email: "Email",
-  		password: "Password"
-  	},
-  	signupFields: {
-  		username: "Username",
-  		email: "Email",
-  		emailOpt: "Email (optional)",
-  		password: "Password",
-  		passwordAgain: "Password (again)"
-  	},
-  	changePasswordFields: {
-  		currentPassword: "Current Password",
-  		newPassword: "New Password",
-  		newPasswordAgain: "New Password (again)"
-  	},
-  	errorMessages: {
-  		usernameTooShort: "Username must be at least 3 characters long",
-  		invalidEmail: "Invalid email",
-  		passwordTooShort: "Password must be at least 6 characters long",
-  		passwordsDontMatch: "Passwords don't match"
-  	}
-  });
+  
 
 /*********** baidu map ************/
+/*
   //创建和初始化地图函数：
   function initMap(){
         createMap();//创建地图
@@ -244,6 +159,13 @@ Template.home.rendered = function() {
     }
     
     initMap();//创建和初始化地图
+    */
 
   };
+
+  Template.home.helpers({
+    news: function() {
+      return Sections.findOne({name: 'news'}).content;
+    }
+  });
 

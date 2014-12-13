@@ -1,34 +1,5 @@
 <template name="profile_edit">
- <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-        <i class="fa fa-bars"></i>
-      </button>
-      <a class="navbar-brand" href="/">
-        <h1>仁美仁爱</h1>
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/">首页</a></li>
-        <li><a href="/blog">医学文章</a></li>
-        {{#if currentUser}}
-          <li class="active"><a href="#">个人资料</a></li>
-          {{#if isInRole 'admin' 'staff' 'faculty' 'nurse' 'blogAdmin'}}
-          <li><a href="http://mail.himagedoctor.com">员工邮箱</a></li>
-          <li><a href="https://www.icloud.com/">员工月历</a></li>
-          {{/if}}
-        {{/if}}
-        {{> loginButtons}} 
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
+{{> nav}}
 
 <section id="profile-edit" class="home-section">
 

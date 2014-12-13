@@ -1,0 +1,52 @@
+<template name="webmaster">
+  {{> nav}}
+  <section id="webmaster" class="home-section text-center">
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+
+            <div class="section-heading">
+              <h2>首页最新消息</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          {{#if isInRole 'admin' 'webmaster'}}
+
+            {{#with news}}
+              {{#if editingNews}}
+              <textarea id="news" name="news" class="form-control">{{content}}</textarea>
+              <p>
+                <button type="button" id="submitNews" class="btn btn-primary">发表</button>
+                <button type="button" id="cancelEditNews" class="btn btn-default">取消</button>
+              </p>
+              {{else}}
+              <p>{{content}}</p>
+              <p>
+                <button type="button" id="editNews" class="btn btn-default">修改</button>
+              </p>
+              {{/if}}
+            {{/with}}
+          {{else}}
+          <div class="alert alert-warning" role="alert">Only a webmaster can see this page!</div>
+          {{/if}}
+
+        </div>
+      </div>
+    </div>       
+    
+  </section>
+</template>
