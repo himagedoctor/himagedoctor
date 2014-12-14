@@ -1,6 +1,6 @@
 Template.home.rendered = function() {
 	/******* scroll page ********/
-	$('body').scrollspy({target: '.navbar-custom'});
+	$('body').scrollspy({target: '.navbar-nav'});
 
 	//jQuery to collapse the navbar on scroll	
 	$(window).scroll(function() {

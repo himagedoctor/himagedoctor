@@ -1,4 +1,7 @@
-Router.configure layoutTemplate: 'layout'
+Router.configure 
+	layoutTemplate: 'layout'
+	onAfterAction: ->
+		document.title = '仁美仁爱'
 
 Router.route '/', ->
 	@render 'home'
