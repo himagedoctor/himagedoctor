@@ -16,7 +16,12 @@
 							</h2>
 							<div class="post-meta">
 								仁美仁爱发表日期: {{formatDate publishedAt 'short'}}
-								{{> blogTags }}
+								{{#if tags}}
+							    <div class="post-tags">
+							      <p> 标签: {{blogFormatTags tags}}</p>
+							    </div>
+							  {{/if}}
+
 							</div>
 							<div class="the-content">
 								{{{excerpt}}}

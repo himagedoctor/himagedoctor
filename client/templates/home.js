@@ -14,7 +14,7 @@ Template.home.rendered = function() {
 	//jQuery for page scrolling feature - requires jQuery Easing plugin
 	this.$('.navbar-nav li a').bind('click', function(event) {
 		var anchor = $(this).attr('href');
-		if(anchor !== '#') {
+		if($(this).attr('class') !== 'dropdown-toggle') {
 			$('html, body').stop().animate({
 				scrollTop: $(anchor).offset().top
 			}, 1500, 'easeInOutExpo');
