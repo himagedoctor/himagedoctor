@@ -28,13 +28,27 @@
 
             {{#with news}}
               {{#if editingNews}}
-              <textarea id="news" name="news" class="form-control">{{content}}</textarea>
-              <p>
-                <button type="button" id="submitNews" class="btn btn-primary">发表</button>
-                <button type="button" id="cancelEditNews" class="btn btn-default">取消</button>
-              </p>
+              <form>
+
+                <!-- use blog medium editor 
+                <div class="edit-mode">
+                    <a href="#" class="selected visual-toggle">Visual</a>
+                    -
+                    <a href="#" class="html-toggle">HTML</a>
+                  </div>
+                  <textarea hidden class="html-editor col-xs-12"></textarea>
+                  <div class="editable" tabindex="3"></div>
+                -->
+                 <textarea id="news" name="news" class="form-control">{{content}}</textarea>
+
+                  <button type="submit" id="submitNews" class="btn btn-primary">发表</button>
+                  <button type="button" id="cancelEditNews" class="btn btn-default">取消</button>
+              
+          
+                
+              </form>
               {{else}}
-              <p>{{content}}</p>
+              <p>{{{content}}}</p>
               <p>
                 <button type="button" id="editNews" class="btn btn-default">修改</button>
               </p>

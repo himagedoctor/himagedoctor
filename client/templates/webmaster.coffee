@@ -1,6 +1,16 @@
 Session.setDefault 'editingNews', null
 
-
+Template.webmaster.rendered = ->
+	###
+	# use blog medium editor
+	news = Sections.findOne(name: 'news')
+	if news?.content
+		@$('.editable').html news.content
+		@$('.html-editor').html news.content
+	# Medium editor
+	BlogEditor.make @
+	###
+	
 Template.webmaster.helpers
 	news: ->
 		Sections.findOne(name: 'news')
