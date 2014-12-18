@@ -63,7 +63,7 @@ Template.home.rendered = function() {
   
 
 /*********** baidu map ************/
-
+/*
   //创建和初始化地图函数：
   function initMap(){
         createMap();//创建地图
@@ -159,7 +159,7 @@ Template.home.rendered = function() {
     }
     
     initMap();//创建和初始化地图
-  
+  */
 
   };
 

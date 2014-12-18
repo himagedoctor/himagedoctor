@@ -16,6 +16,8 @@ Meteor.startup ->
 		Sections.insert
 			name: 'news'
 			content: 'news update here'
-		
-  
-  return
+
+	# for dev, remove them on prod
+	Meteor.methods
+		removeAllAppointments: ->
+			Appointments.remove({})

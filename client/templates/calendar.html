@@ -1,0 +1,36 @@
+<template name="calendar">
+
+{{> nav}}
+
+<section id="profile" class="home-section text-center">
+  {{#if currentUser}}
+  <div class="heading-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+
+          <div class="section-heading">
+            <h2>Staff Calendar</h2>
+            <i class="fa fa-2x fa-angle-down"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        {{> ReactiveFullcalendar options=calendarOptions}}
+      </div>
+    </div>
+  </div>
+  {{> appointmentModal}}
+  {{/if}}
+</section>
+</template>

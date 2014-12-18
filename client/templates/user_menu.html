@@ -2,7 +2,7 @@
 	{{#if currentUser}}
     {{#if isInRole 'admin' 'webmaster' 'blogAdmin' 'doctor' 'staff' 'nurse'}}
       <li><a href="http://mail.himagedoctor.com">员工邮箱</a></li>
-      <li><a href="https://www.icloud.com/">员工月历</a></li>
+      <li><a href="/calendar">员工月历</a></li>
       {{#if isInRole 'admin' 'webmaster'}}
       	<li><a href="/webmaster">网页管理</a></li>
       {{/if}}

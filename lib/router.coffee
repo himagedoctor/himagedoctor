@@ -7,6 +7,10 @@ Router.route '/', ->
 	@render 'home'
 	return
 
+Router.route '/calendar', ->
+	@render 'calendar'
+	return
+
 Router.route '/profile', ->
 	@render 'profile'
 	return
