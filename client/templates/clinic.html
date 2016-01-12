@@ -1,0 +1,404 @@
+<template name="clinic">
+ <nav class="navbar navbar-custom navbar-home navbar-fixed-top" role="navigation">
+  <div class="container">
+    {{> navbarHeader}}
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="#mission">国际门诊使命</a></li>
+        <li><a href="#visit">就诊模式</a></li>
+        <li><a href="#insurance">合作保险</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多信息 <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#news">最新消息</a></li>
+            <li><a href="/blog">医学文章</a></li>
+
+            {{> userMenu}}
+          </ul>
+        </li>
+        {{> loginButtons}}
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!-- Section: mission-->
+<section id="mission" class="home-section text-center">
+  <div class="heading-about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="section-heading">
+            <h2>国际门诊使命</h2>
+            <i class="fa fa-2x fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-lg-offset-5">
+        <hr class="marginbot-50">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="list-unstyled">
+          <li class="list-item">秉承着“爱人如己，医者仁心”的理念服务中外患者</li>
+          <li class="list-item">真诚对待患者和合作伙伴</li>
+          <li class="list-item">高效优质的医疗服务</li>
+          <li class="list-item">全心关注患者健康</li>
+          <li class="list-item">充分保护患者隐私</li>
+        </ul>
+        <!-- Slides Container  -->
+        <div id="clinic_container" class="slider-container">
+          <div u="slides" class="slider">
+            <div><img u="image" src="/images/clinic/front.jpg" /></div>
+            <div><img u="image" src="/images/clinic/waiting_room.jpg" /></div>
+            <div><img u="image" src="/images/clinic/rest.jpg" /></div>
+            <div><img u="image" src="/images/clinic/clinic_room1.jpg" /></div>
+            <div><img u="image" src="/images/clinic/clinic_room2.jpg" /></div>
+          </div>
+
+          <!-- Arrow Navigator Skin Begin -->
+
+          <!-- Arrow Left  -->
+          <span u="arrowleft" class="jssora01l"
+          style="width: 55px; height: 55px; top: 122px; left: 8px;">
+          </span>
+
+          <!-- Arrow Right -->
+          <span u="arrowright" class="jssora01r"
+          style="width: 55px; height: 55px; top: 122px; right: 8px;">
+          </span>
+        </div>
+        <!-- Arrow Navigator Skin End -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Section: mission-->
+
+  <!-- Section: visit-->
+  <section id="visit" class="home-section text-center bg-gray">
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="section-heading">
+              <h2>就诊模式</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>就诊模式一</h3>
+          <div class="well visit-flow">
+              <strong>预约就诊：</strong><br />
+              提前拨打400-024-7120<br />
+              确定就诊时间和看诊医生<br />
+              <br />
+              或者<br /> <br />
+              <strong>非预约就诊：</strong><br />
+              直接到门诊就诊 <br />
+              可能需要等待
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            护士测量患者生命体征前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            中国籍医生看诊，给予治疗方案
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            根据医生的治疗方案，患者具体需要，护士全程陪诊院内的化验检查。
+          </div>
+          <h3>就诊模式二</h3>
+          <div class="well visit-flow">
+              <strong>预约就诊：</strong><br />
+              提前拨打400-024-7120<br />
+              确定就诊时间和看诊医生<br />
+              <br />
+              或者<br /> <br />
+              <strong>非预约就诊：</strong><br />
+              直接到门诊就诊 <br />
+              可能需要等待
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            护士测量患者生命体征前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            中国籍医生看诊
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            根据患者的意愿，选择院内外籍医生会诊，完善治疗计划。需要等待15--50分钟
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            根据医生的治疗方案，患者具体需要，护士全程陪诊院内的化验检查。
+          </div>
+          <h3>就诊模式三</h3>
+          <div class="well visit-flow">
+              <strong>预约就诊：</strong><br />
+              提前拨打400-024-7120<br />
+              确定就诊时间和看诊医生<br />
+              <br />
+              或者<br /> <br />
+              <strong>非预约就诊：</strong><br />
+              直接到门诊就诊 <br />
+              可能需要等待
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            护士测量患者生命体征前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            中国籍医生看诊
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            根据患者意愿，以医疗文件形式，会诊国外外籍医疗专家，完善治疗计划。需要等待3--7个工作日
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            根据医生的治疗方案，患者具体需要，护士全程陪诊院内的化验检查。
+          </div>
+          <h3>就诊模式四</h3>
+          <div class="well visit-flow">
+              <strong>预约就诊：</strong><br />
+              提前拨打400-024-7120<br />
+              确定就诊时间和看诊医生<br />
+              <br />
+              或者<br /> <br />
+              <strong>非预约就诊：</strong><br />
+              直接到门诊就诊 <br />
+              可能需要等待
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            护士测量患者生命体征前台接待：患者填写就诊信息表
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            中国籍医生看诊
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            根据患者意愿及具体病情，选择国外医院看诊。
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            辅助患者准备签证事宜，同时根据患者病情，病历翻译，联系相关医院。<br />
+            医院联系等待时间3-10个工作日，签证等待时间因具体情况而定。<br />
+            根据患者意愿及具体病情，选择全程陪诊人员（医生，护士，非医疗翻译者）
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            确认就诊外籍医院，陪同人员，转诊时间及其他具体行程
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            外籍医院就诊
+          </div>
+          <span class="glyphicon glyphicon-arrow-down"></span>
+          <div class="well visit-flow">
+            回国后，门诊随诊，全面评估患者病情变化
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Section: visit-->
+
+  <!-- Section: insurance-->
+  <section id="insurance" class="home-section text-center">
+    <div class="heading-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="section-heading">
+              <h2>合作保险</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins1.jpg" alt="insurance 1" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins2.jpg" alt="insurance 2" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins3.jpg" alt="insurance 3" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins4.gif" alt="insurance 4" />
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins5.png" alt="insurance 1" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins6.jpg" alt="insurance 2" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins7.jpg" alt="insurance 3" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins8.jpg" alt="insurance 4" />
+          </a>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins9.png" alt="insurance 1" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins10.jpg" alt="insurance 2" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins11.jpg" alt="insurance 3" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins12.jpg" alt="insurance 4" />
+          </a>
+        </div>
+      </div>
+          <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins13.jpg" alt="insurance 1" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins14.jpg" alt="insurance 2" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins15.jpg" alt="insurance 3" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins16.jpg" alt="insurance 4" />
+          </a>
+        </div>
+      </div>
+          <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins17.jpg" alt="insurance 1" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins18.jpg" alt="insurance 2" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins19.jpg" alt="insurance 3" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins20.jpg" alt="insurance 4" />
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins21.gif" alt="insurance 1" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins22.jpg" alt="insurance 2" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins23.jpg" alt="insurance 3" />
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img src="/images/insurance/ins24.png" alt="insurance 4" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /Section: insurance-->
+</template>

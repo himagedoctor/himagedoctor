@@ -16,20 +16,32 @@
         <li><a href="#intro">首页</a></li>
         <li><a href="#about">关于我们</a></li>
         <li><a href="#service">服务项目</a></li>
-        <li><a href="#contact">联系我们</a></li> 
+        <li><a href="/clinic">国际门诊</a></li>
+        <li><a href="/charity">慈善工作</a></li>
+        <!--
+        <li><a href="#contact">联系我们</a></li>
+      -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">全科培训 <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="/training-long">长期培训</a></li>
+            <li><a href="#">短期培训</a></li>
+            <li><a href="#">师资介绍</a></li>
+            <li><a href="#">学生介绍</a></li>
+            <li><a href="#">合作医院</a></li>
+            <li><a href="#">加入我们</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多信息 <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#training">全科培训</a></li>
-            <li><a href="#faculty">师资介绍</a></li>                 
-            <li><a href="#clinic">国际门诊</a></li>
             <li><a href="#news">最新消息</a></li>
             <li><a href="/blog">医学文章</a></li>
-            
+
             {{> userMenu}}
           </ul>
-        </li>  
-        {{> loginButtons}}     
+        </li>
+        {{> loginButtons}}
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -39,7 +51,7 @@
 
 <!-- Section: intro -->
 <section id="intro" class="intro">
-  <img src="/images/himage.jpg" class="img-responsive">
+  <img src="/images/himage.png" class="img-responsive">
 </section>
 
 <!-- /Section: intro -->
@@ -76,15 +88,15 @@
     <div class="row">
       <div class="col-lg-12">
         <p>美国仁美医疗中心是一个外资医疗机构，总部位于美国俄克拉荷马州图尔萨市。2002年进驻中国辽宁沈阳，致力于全科医生培训、国际连锁门诊、慈善医疗援助，孤儿家庭助养，HIV患者的服务及临终关怀项目。仁美国际医疗团队由来自中国、美国、加拿大、德国、塞拉利昂、挪威等国的医务人员组成。自2005年至今，每年帮助首都医科大学进行全国师资培训。先后在上海、广州、南京、杭州、郑州、长春、大连、锦州等地开展了全科培训工作。并与本地中国医科大学附属医院、辽宁省医院、沈阳市妇婴医院等大型综合性医院联合培养全科医生。创建至今，我们在柬埔寨、巴基斯坦、印度尼西亚、埃及等国家共进行10次国际医疗援助活动。曾为国内30多个偏远地区提供慈善医疗服务，并定向为11家养老院和5家福利院提供慈善医疗服务。
-        </p>   
+        </p>
         <video width="100%" controls>
           <source src="http://www.gracedimension.com/clinic.mov" type="video/mp4">
 
             Your browser does not support the video tag.
-          </video>          
+          </video>
         </div>
       </div>
-    </div>    
+    </div>
   </section>
   <!-- /Section: about -->
 
@@ -113,7 +125,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
 
           <div class="service-box">
             <div class="service-icon">
@@ -136,28 +148,7 @@
           </div>
 
         </div>
-        <div class="col-sm-3 col-md-3">
-
-          <div class="service-box">
-            <div class="service-icon">
-              <i class="fa fa-2x fa-line-chart"></i>
-            </div>
-            <div class="service-desc">
-              <h3>毕业生的发展与就业</h3>
-              <p>
-                在仁美连锁门诊从事医生或管理工作
-              </p>
-              <p>推荐参加美国全科住院医生培训项目，考取美国医生执照</p>
-              <p>推荐到国际门诊或医院工作（例如，环球医生国际门诊，和睦家医院等）</p>
-              <p>推荐到外国驻中国领事馆或国际企业驻厂医生</p>
-              <p>国际旅行团队及国际保险企业的责任医生及医疗顾问</p>
-              <p>综合医院全科诊室工作</p>
-
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
 
           <div class="service-box">
             <div class="service-icon">
@@ -169,12 +160,12 @@
               <p>爱心慈善医疗，包括农村、养老院、福利院义诊，国外义诊，国内及国际医疗救援</p>
               <p>慈善门诊为特殊人群及经济困难患者减免医疗费用</p>
               <p>为助养孤儿减免医疗费用</p>
-              <p>为临终患者提供生活照顾及免费医疗服务</p>                
+              <p>为临终患者提供生活照顾及免费医疗服务</p>
             </div>
           </div>
 
         </div>
-        <div class="col-sm-3 col-md-3">
+        <div class="col-sm-4 col-md-4">
 
           <div class="service-box">
             <div class="service-icon">
@@ -194,7 +185,7 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>
   </section>
   <!-- /Section: services -->
 
@@ -252,8 +243,8 @@
             <address>
               <strong>电邮箱</strong><br>
               <a href="mailto:#">clinic@himagedoctor.com</a>
-            </address>           
-          </div>  
+            </address>
+          </div>
         </div>
         <div class="col-lg-3">
           <div class="widget-contact">
@@ -261,9 +252,9 @@
               <strong>微信</strong><br>
               <img src="/images/qrcode.jpg">
             </address>
-          </div> 
+          </div>
         </div>
-      </div>  
+      </div>
 
     </div>
   </section>
@@ -315,8 +306,8 @@
       <!-- Arrow Navigator Skin End -->
 
     </div>
-  </div>       
-</div>    
+  </div>
+</div>
 
 </section>
 <!-- /Section: training -->
@@ -349,18 +340,18 @@
             <div class="subtitle">石磊全科医生</div>
             <div class="avatar"><img src="/images/faculty/peter.jpg" alt="" class="img-responsive img-circle" /></div>
           </div>
-        </div>            
+        </div>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3">
         <h4>简历</h4>
-        <p>堪萨斯州立大学,医学博士</p>  
+        <p>堪萨斯州立大学,医学博士</p>
         <p>美国Kansas州St Francis地区医疗中心家庭医学培训中心，住院医生</p>
         <p>1994-1996 Kansas家庭医生医疗中心任医生</p>
         <p>1997-1999 沈阳美亚医疗中心任医生</p>
         <p>2000-2001 沈阳环球之友任医生</p>
-        <p>2002-今 沈阳环球医生国际门诊任医生</p>             
+        <p>2002-今 沈阳环球医生国际门诊任医生</p>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3">              
+      <div class="col-xs-6 col-sm-3 col-md-3">
         <div class="team boxed-grey">
           <div class="inner">
             <h5>Dr. Carlton Baer</h5>
@@ -370,8 +361,8 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3"> 
-        <h4>简历</h4> 
+      <div class="col-xs-6 col-sm-3 col-md-3">
+        <h4>简历</h4>
         <p>美国弗吉尼亚州医学院,医学博士</p>
         <p>美国俄亥俄州，Akron市医院家庭医学住院医生培训中心</p>
         <p>在美国Berkeley Springs Medical Associates独立执业</p>
@@ -386,17 +377,17 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-6 col-sm-3 col-md-3">              
+      <div class="col-xs-6 col-sm-3 col-md-3">
         <div class="team boxed-grey">
           <div class="inner">
             <h5>Dr. Brian Holsinger</h5>
             <div class="subtitle">全科医生</div>
             <div class="avatar"><img src="/images/faculty/brian.jpg" alt="" class="img-responsive img-circle" /></div>
           </div>
-        </div>       
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3"> 
-        <h4>简历</h4> 
+      <div class="col-xs-6 col-sm-3 col-md-3">
+        <h4>简历</h4>
         <p>美国俄亥俄州大学,骨科博士</p>
         <p>1995-1996 美国Ohio州Grandview医院和医疗中心，轮转实习医生</p>
         <p>1996-1999 美国Tulsa，In His IMAGE 家庭医学培训中心，住院医生</p>
@@ -405,17 +396,17 @@
         <p>2009-至今 中国沈阳环球医生</p>
       </div>
 
-      <div class="col-xs-6 col-sm-3 col-md-3">        
+      <div class="col-xs-6 col-sm-3 col-md-3">
         <div class="team boxed-grey">
           <div class="inner">
             <h5>Dr. Eva Holsinger</h5>
             <div class="subtitle">儿科医生</div>
             <div class="avatar"><img src="/images/faculty/eva.jpg" alt="" class="img-responsive img-circle" /></div>
           </div>
-        </div>            
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3"> 
-        <h4>简历</h4> 
+      <div class="col-xs-6 col-sm-3 col-md-3">
+        <h4>简历</h4>
         <p>美国俄克拉何马州大学,医学博士</p>
         <p>1999-2002 年儿科住院医生</p>
         <p>2003-2006 国际儿童健康博士后学习</p>
@@ -423,7 +414,7 @@
         <p>2007-2009 医学院儿科系，儿科医生和助理教授</p>
         <p>2009-今 Case医学院儿科系，儿科连接助理教授</p>
       </div>
-    </div> 
+    </div>
 
     <div class="row">
       <div class="col-lg-2 col-lg-offset-5">
@@ -434,18 +425,18 @@
       <div class="col-xs-6 col-sm-3 col-md-3">
         <div class="team boxed-grey">
           <div class="inner">
-            <h5>Dr. Mei-Lin Chen</h5>
-            <div class="subtitle">陈美龄全科医生</div>
-            <div class="avatar"><img src="/images/faculty/meilin.jpg" alt="" class="img-responsive img-circle" /></div>
+            <h5>Dr. Sunny Wong</h5>
+            <div class="subtitle">黃日正全科医生</div>
+            <div class="avatar"><img src="/images/faculty/sunny.jpg" alt="" class="img-responsive img-circle" /></div>
           </div>
-        </div>            
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3"> 
+       <div class="col-xs-6 col-sm-3 col-md-3">
         <h4>简历</h4>
-        <p>美国加州戴维斯大学,医学博士</p>
-        <p>2009-2011 卫理公会家庭医生的住院医生</p>
-        <p>2011-2013  家庭医生-社区福利保健中心</p>
-        <p>2012 急诊医师-埃佛勒斯紧急护理中心</p>
+        <p>加拿大卡尔加里大学,医学博士</p>
+        <p>2004 加拿大多伦多家庭医师学院</p>
+        <p>2004-2006 阿尔伯塔内外科医师学院</p>
+        <p>2006 安大略内外科医师学院</p>
         <p>2013-至今 中国沈阳环球医生</p>
       </div>
       <div class="col-xs-6 col-sm-3 col-md-3">
@@ -455,41 +446,16 @@
             <div class="subtitle">全科医生</div>
             <div class="avatar"><img src="/images/faculty/heather.jpg" alt="" class="img-responsive img-circle" /></div>
           </div>
-        </div>                                             
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-md-3"> 
+      <div class="col-xs-6 col-sm-3 col-md-3">
         <h4>简历</h4>
         <p>美国达特茅斯医学院,医学博士</p>
         <p>2009-2012 苏福尔斯家庭医学住院培训</p>
         <p>2013-至今 中国沈阳环球医生</p>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-5">
-        <hr class="marginbot-50">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-6 col-sm-3 col-md-3">             
-        <div class="team boxed-grey">
-          <div class="inner">
-            <h5>Dr. Sunny Wong</h5>
-            <div class="subtitle">黃日正全科医生</div>
-            <div class="avatar"><img src="/images/faculty/sunny.jpg" alt="" class="img-responsive img-circle" /></div>
-          </div>
-        </div>     
-      </div>
-       <div class="col-xs-6 col-sm-3 col-md-3"> 
-        <h4>简历</h4>
-        <p>加拿大卡尔加里大学,医学博士</p>
-        <p>2004 加拿大多伦多家庭医师学院</p>
-        <p>2004-2006 阿尔伯塔内外科医师学院</p>
-        <p>2006 安大略内外科医师学院</p>
-        <p>2013-至今 中国沈阳环球医生</p>
-      </div>
-    </div>             
-  </div>    
+  </div>
 </section>
 <!-- /Section: faculty -->
 
@@ -539,10 +505,10 @@
     </span>
 
   </div>
-  
+
   <!-- Arrow Navigator Skin End -->
-</div>       
-</div>    
+</div>
+</div>
 
 </section>
 <!-- /Section: clinic -->
@@ -572,10 +538,10 @@
     <div class="row">
       <div class="col-lg-12">
         <p>{{{news}}}
-        </p>              
+        </p>
         </div>
       </div>
-    </div>    
+    </div>
   </section>
   <!-- /Section: about -->
 </template>
