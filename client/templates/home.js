@@ -2,7 +2,7 @@ Template.home.rendered = function() {
 	/******* scroll page ********/
 	$('body').scrollspy({target: '.navbar-nav'});
 
-	//jQuery to collapse the navbar on scroll	
+	//jQuery to collapse the navbar on scroll
 	$(window).scroll(function() {
 		if ($('.navbar').offset().top > 50) {
 			$('.navbar-fixed-top').addClass('top-nav-collapse');
@@ -29,38 +29,6 @@ Template.home.rendered = function() {
 		event.preventDefault();
 	});
 
-	/****** jssor slider *************/
-	var options = { 
-		$AutoPlay: true,
-		$ArrowNavigatorOptions: {
-			$Class: $JssorArrowNavigator$,
-			$ChanceToShow: 2
-		}
-	};
-	var jssorSlider1 = new $JssorSlider$('training_container', options);
-	var jssorSlider2 = new $JssorSlider$('clinic_container', options);
-	//responsive code begin
-  //you can remove responsive code if you don't want the slider scales
-  //while window resizes
-  function ScaleSlider() {
-  	var parentWidth = $('#training_container').parent().width();
-  	if (parentWidth) {
-  		jssorSlider1.$ScaleWidth(parentWidth);
-  		jssorSlider2.$ScaleWidth(parentWidth);
-  	}
-  	else {
-  		window.setTimeout(ScaleSlider, 30);
-  	}
-  }
-  //Scale slider after document ready
-  ScaleSlider();
-  if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-      //Capture window resize event
-      $(window).bind('resize', ScaleSlider);
-    }
-  //responsive code end
-
-  
 
 /*********** baidu map ************/
 /*
@@ -106,7 +74,7 @@ Template.home.rendered = function() {
     ];
     //创建marker
     function addMarker(){
-    	for (var i = 0; i < markerArr.length; i++) {  
+    	for (var i = 0; i < markerArr.length; i++) {
     		var json = markerArr[i];
     		var p0 = json.point.split("|")[0];
     		var p1 = json.point.split("|")[1];
@@ -157,7 +125,7 @@ Template.home.rendered = function() {
     	var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
     	return icon;
     }
-    
+
     initMap();//创建和初始化地图
   */
 
@@ -168,4 +136,3 @@ Template.home.rendered = function() {
       return Sections.findOne({name: 'news'}).content;
     }
   });
-

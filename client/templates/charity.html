@@ -1,65 +1,54 @@
 <template name="charity">
- <nav class="navbar navbar-custom navbar-home navbar-fixed-top" role="navigation">
-  <div class="container">
-    {{> navbarHeader}}
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="/">首页</a></li>
-        <li><a href="#mainland">国内慈善活动</a></li>
-        <li><a href="#foreign">国外慈善活动</a></li>
-        <li><a href="#contact">联系方式</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">更多信息 <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#news">最新消息</a></li>
-            <li><a href="/blog">医学文章</a></li>
-
-            {{> userMenu}}
-          </ul>
-        </li>
-        {{> loginButtons}}
-      </ul>
+  <nav class="navbar navbar-custom navbar-home navbar-fixed-top" role="navigation">
+   <div class="container">
+      {{> navbarHeader}}
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">首页</a></li>
+          <li><a href="#mainland">国内慈善活动</a></li>
+          <li><a href="#foreign">国外慈善活动</a></li>
+          <li><a href="#contact">联系方式</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
+    <!-- /.container -->
+  </nav>
 
-<!-- Section: mainland-->
-<section id="mainland" class="home-section text-center">
-  <div class="heading-about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="section-heading">
-            <h2>国内慈善活动</h2>
-            <i class="fa fa-2x fa-angle-down"></i>
+  <!-- Section: mainland-->
+  <section id="mainland" class="home-section text-center">
+    <div class="heading-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="section-heading">
+              <h2>国内慈善活动</h2>
+              <i class="fa fa-2x fa-angle-down"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-5">
-        <hr class="marginbot-50">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-lg-offset-5">
+          <hr class="marginbot-50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p><strong>义诊地点</strong>：沈阳周围的养老院，沈阳及省内阜新，朝阳，抚顺辽中等孤儿院，辽宁省内偏远贫困的农村如建昌，建平，朝阳，铁岭，辽阳，岫岩，康平等及国内偏远贫困地区。国内偏远贫困少数民族地区如云南，甘肃，四川，玉树等。</p>
+          <p><strong>帮助人群</strong>：养老院孤寡困难及需要帮助的老人，孤儿院的孩子，农民工，贫困人群。</p>
+          <p><strong>慈善活动时间</strong>：现在沈阳我们有固定每周有4个人半天的慈善活动时间及不定期的与一些NGO组织的合作。</p>
+          <p><strong>灾难医疗支援</strong>：在四川地震，玉树地震等灾难后对受灾人群提供相应的医疗支援。</p>
+          <p><strong>合作</strong>：现已和国内几家NGO合作。如果有意向合作单位请填写申请清表（请点击申请表下载）</p>
+          <p><strong>新闻</strong>：2015-年11月到-12月期间每周三我们为沈阳周边的养老院送去圣诞及新年礼物</p>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <p><strong>义诊地点</strong>：沈阳周围的养老院，沈阳及省内阜新，朝阳，抚顺辽中等孤儿院，辽宁省内偏远贫困的农村如建昌，建平，朝阳，铁岭，辽阳，岫岩，康平等及国内偏远贫困地区。国内偏远贫困少数民族地区如云南，甘肃，四川，玉树等。</p>
-        <p><strong>帮助人群</strong>：养老院孤寡困难及需要帮助的老人，孤儿院的孩子，农民工，贫困人群。</p>
-        <p><strong>慈善活动时间</strong>：现在沈阳我们有固定每周有4个人半天的慈善活动时间及不定期的与一些NGO组织的合作。</p>
-        <p><strong>灾难医疗支援</strong>：在四川地震，玉树地震等灾难后对受灾人群提供相应的医疗支援。</p>
-        <p><strong>合作</strong>：现已和国内几家NGO合作。如果有意向合作单位请填写申请清表（请点击申请表下载）</p>
-        <p><strong>新闻</strong>：2015-年11月到-12月期间每周三我们为沈阳周边的养老院送去圣诞及新年礼物</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Section: mainland-->
-
+  </section>
+  <!-- /Section: mainland-->
 
   <!-- Section: foreign-->
   <section id="foreign" class="home-section text-center bg-gray">
@@ -95,15 +84,14 @@
   </section>
   <!-- /Section: foreign-->
 
-
-  <!-- Section: insurance-->
-  <section id="insurance" class="home-section text-center">
-    <div class="heading-contact">
+  <!-- Section: foreign-->
+  <section id="contact" class="home-section text-center">
+    <div class="heading-about">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <div class="section-heading">
-              <h2>合作保险</h2>
+              <h2>联系方式</h2>
               <i class="fa fa-2x fa-angle-down"></i>
             </div>
           </div>
@@ -117,63 +105,11 @@
         </div>
       </div>
       <div class="row">
-
+        <div class="col-lg-12">
+          电话：024-22472979 或 024-22742989
+        </div>
       </div>
     </div>
   </section>
-  <!-- /Section: insurance-->
-
-<!-- Section: clinic -->
-<section id="clinic" class="home-section text-center bg-gray">
-  <div class="heading-about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="section-heading">
-            <h2>国际门诊</h2>
-            <i class="fa fa-2x fa-angle-down"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2 col-lg-offset-5">
-        <hr class="marginbot-50">
-      </div>
-    </div>
-    <div class="row">
-      <!-- Slides Container  -->
-
-      <div id="clinic_container" class="slider-container">
-
-        <div u="slides" class="slider">
-          <div><img u="image" src="http://res.cloudinary.com/ds833mgxf/image/upload/v1418738404/doctors_mf9ynu.jpg" /></div>
-          <div><img u="image" src="http://res.cloudinary.com/ds833mgxf/image/upload/v1418738332/front_desk_ger8vu.jpg" /></div>
-          <div><img u="image" src="http://res.cloudinary.com/ds833mgxf/image/upload/v1418738342/waiting_area_t9gimv.jpg" /></div>
-          <div><img u="image" src="http://res.cloudinary.com/ds833mgxf/image/upload/v1418738343/exam_room_atwni2.jpg" /></div>
-          <div><img u="image" src="http://res.cloudinary.com/ds833mgxf/image/upload/v1418738327/exam_room2_a5mjjg.jpg" /></div>
-        </div>
-
-        <!-- Arrow Navigator Skin Begin -->
-
-        <!-- Arrow Left  -->
-        <span u="arrowleft" class="jssora01l"
-        style="width: 55px; height: 55px; top: 122px; left: 8px;">
-      </span>
-
-      <!-- Arrow Right -->
-      <span u="arrowright" class="jssora01r"
-      style="width: 55px; height: 55px; top: 122px; right: 8px;">
-    </span>
-
-  </div>
-
-  <!-- Arrow Navigator Skin End -->
-</div>
-</div>
-
-</section>
-<!-- /Section: clinic -->
+  <!-- /Section: foreign-->
 </template>
