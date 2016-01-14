@@ -66,7 +66,6 @@ iron:location@1.0.11
 iron:middleware-stack@1.0.11
 iron:router@1.0.12
 iron:url@1.0.11
-joshowens:simple-form@0.2.1
 jquery@1.11.4
 kaptron:minimongoid@0.9.8
 launch-screen@1.0.4
