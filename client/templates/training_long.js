@@ -1,5 +1,6 @@
 Template.trainingLong.rendered = function() {
 	/******* scroll page ********/
+	$(window).scrollTop(0);
 	$('body').scrollspy({target: '.navbar-nav'});
 
 	//jQuery to collapse the navbar on scroll

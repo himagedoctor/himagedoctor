@@ -1,5 +1,6 @@
 Template.charity.rendered = function() {
 	/******* scroll page ********/
+	$(window).scrollTop(0);
 	$('body').scrollspy({target: '.navbar-nav'});
 
 	//jQuery to collapse the navbar on scroll
@@ -28,4 +29,36 @@ Template.charity.rendered = function() {
 		}, 1500, 'easeInOutExpo');
 		event.preventDefault();
 	});
+
+	/****** jssor slider *************/
+	var options = {
+		$AutoPlay: true,
+		$ArrowNavigatorOptions: {
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow: 2
+		}
+	};
+	var jssorSlider1 = new $JssorSlider$('charity1', options);
+	var jssorSlider2 = new $JssorSlider$('charity2', options);
+	//responsive code begin
+  //you can remove responsive code if you don't want the slider scales
+  //while window resizes
+  function ScaleSlider() {
+  	var parentWidth = $('#charity1').parent().width();
+  	if (parentWidth) {
+  		jssorSlider1.$ScaleWidth(parentWidth);
+  		jssorSlider2.$ScaleWidth(parentWidth);
+  	}
+  	else {
+  		window.setTimeout(ScaleSlider, 30);
+  	}
+  }
+  //Scale slider after document ready
+  ScaleSlider();
+  if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+      //Capture window resize event
+      $(window).bind('resize', ScaleSlider);
+    }
+  //responsive code end
+
 };
