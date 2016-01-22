@@ -30,6 +30,34 @@ Template.home.rendered = function() {
 		event.preventDefault();
 	});
 
+	/****** jssor slider *************/
+	var options = {
+		$AutoPlay: true,
+		$ArrowNavigatorOptions: {
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow: 2
+		}
+	};
+	var jssorSlider1 = new $JssorSlider$('home_container', options);
+	//responsive code begin
+  //you can remove responsive code if you don't want the slider scales
+  //while window resizes
+  function ScaleSlider() {
+  	var parentWidth = $('#home_container').parent().width();
+  	if (parentWidth) {
+  		jssorSlider1.$ScaleWidth(parentWidth);
+  	}
+  	else {
+  		window.setTimeout(ScaleSlider, 30);
+  	}
+  }
+  //Scale slider after document ready
+  ScaleSlider();
+  if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+      //Capture window resize event
+      $(window).bind('resize', ScaleSlider);
+    }
+  //responsive code end
 
 /*********** baidu map ************/
 /*
