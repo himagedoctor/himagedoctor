@@ -230,9 +230,8 @@ hr {
 --- Intro
 ============================ */
 
-.intro {
-	width:100%;
-	/* position:relative; */
+.service {
+  padding-top: 30px;
 }
 
 
