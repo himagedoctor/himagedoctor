@@ -308,8 +308,8 @@ Photo Slider
   top: 0px;
   margin-left: auto;
   margin-right: auto;
-  width: 800px;
-  height: 350px;
+  width: 600px;
+  height: 400px;
 }
 
 .slider {
@@ -317,8 +317,8 @@ Photo Slider
   position: absolute;
   overflow: hidden;
   top: 0px;
-  width: 800px;
-  height: 350px;
+  width: 600px;
+  height: 400px;
 }
 
 
