@@ -593,6 +593,12 @@ a,.tp-caption a.btn:hover {
   border: 5px solid #67b0d1;
 }
 
+.avatar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bg-skin {
   background: #67b0d1;
 }
