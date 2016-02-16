@@ -5,7 +5,6 @@
 
 mrt:jquery-easing
 natestrauser:jquery-scrollto
-iron:router
 ryw:blog
 coffeescript
 accounts-password
@@ -29,3 +28,5 @@ ejson
 spacebars
 check
 twbs:bootstrap
+kadira:flow-router
+kadira:blaze-layout
