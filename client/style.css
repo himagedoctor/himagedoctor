@@ -623,3 +623,7 @@ footer {
   font-weight: bold;
   font-size: large;
 }
+
+.form-left {
+  text-align: left;
+}

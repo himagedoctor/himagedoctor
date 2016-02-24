@@ -1,10 +1,3 @@
-Meteor.subscribe "sections"
-Meteor.subscribe "appointments"
-
-Blog.config
-	blogIndexTemplate: 'blogs' # '/blog' route
-	blogShowTemplate: 'blog'   # '/blog/:slug' route
-
 ###
 accounts ui bootstrap3
 ###
