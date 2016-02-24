@@ -5,13 +5,11 @@
 
 mrt:jquery-easing
 natestrauser:jquery-scrollto
-ryw:blog
 coffeescript
 accounts-password
 alanning:roles
 ian:accounts-ui-bootstrap-3
 mrt:accounts-admin-ui-bootstrap-3
-gquemart:meteor-reactive-fullcalendar
 
 standard-minifiers
 meteor-base
