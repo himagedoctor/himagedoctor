@@ -28,3 +28,6 @@ check
 twbs:bootstrap
 kadira:flow-router
 kadira:blaze-layout
+gfk:notifications
+tap:i18n
+lepozepo:cloudinary
