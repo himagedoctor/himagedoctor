@@ -242,6 +242,7 @@ hr {
 .boxed-grey {
 	background: #f9f9f9;
 	padding: 20px;
+  border-bottom: 5px solid white;
 }
 
 #team-pic {
@@ -511,11 +512,13 @@ Photo Slider
 
 	.team.boxed-grey {
 		margin-bottom: 30px;
+    border-bottom: 5px solid white;
 	}
 
 	.boxed-grey {
 		margin-bottom: 30px;
-	}
+    border-bottom: 5px solid white;
+  }
 
 
 }

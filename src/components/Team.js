@@ -1,7 +1,7 @@
 import React from 'react';
 
 //TODO: be responsive
-const board1 = [
+const board = [
   { name: 'Peter Burgos',
     title: '常务董事',
     picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/peter.png',
@@ -22,9 +22,6 @@ const board1 = [
     picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/hongmei.png',
     key: 4,
   },
-];
-
-const board2 = [
   { name: 'Jenkins',
     title: '董事',
     picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/jenkins.png',
@@ -47,7 +44,7 @@ const board2 = [
   },
 ];
 
-const members1 = [
+const members = [
   { name: '庞严',
     title: 'CEO',
     picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/pangyan.png',
@@ -68,9 +65,6 @@ const members1 = [
     picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/machi.png',
     key: 12,
   },
-];
-
-const members2 = [
   { name: '李楠楠',
     title: '全科培训部总监兼市场部总监',
     picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/nannan.png',
@@ -91,23 +85,22 @@ const members2 = [
     picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/christina.png',
     key: 16,
   },
+  {
+    name: '张朝阳',
+    title: '后勤部主任',
+    picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/yangyang.png',
+    key: 17,
+  },
 ];
 
-const lastMember = {
-  name: '张朝阳',
-  title: '后勤部主任',
-  picture: 'http://res.cloudinary.com/ds833mgxf/image/upload/v1453522498/himagedoctor/yangyang.png',
-  key: 17,
-}
+
 
 const Member = ({member}) => (
-  <div className="col-xs-6 col-sm-3 col-md-3">
-    <div className="team boxed-grey">
-      <div className="inner">
-        <h5>{member.name}</h5>
-        <div className="subtitle">{member.title}</div>
-        <div className="avatar"><img src={member.picture} alt="" width="220" height="300" /></div>
-      </div>
+  <div className="team boxed-grey">
+    <div className="inner">
+      <h5>{member.name}</h5>
+      <div className="subtitle">{member.title}</div>
+      <div className="avatar"><img src={member.picture} alt="" width="220" height="300" /></div>
     </div>
   </div>
 );
@@ -133,18 +126,12 @@ export const Team = () => (
         </div>
       </div>
       <h3>董事会成员</h3>
-      <div className="row">
-        {board1.map(member => (
-          <Member member={member} key={member.key}/>
-        ))}
-      </div>
-      <div className="row">
-        <div className="col-lg-2 col-lg-offset-5">
-          <hr className="marginbot-50" />
-        </div>
-      </div>
-      <div className="row">
-        {board2.map(member => (
+      <div style={{
+        display: 'flex',
+        flexFlow: 'row wrap',
+        justifyContent: 'space-around'
+      }}>
+        {board.map(member => (
           <Member member={member} key={member.key}/>
         ))}
       </div>
@@ -154,28 +141,14 @@ export const Team = () => (
         </div>
       </div>
       <h3>管理团队成员</h3>
-      <div className="row">
-        {members1.map(member => (
+      <div style={{
+        display: 'flex',
+        flexFlow: 'row wrap',
+        justifyContent: 'space-around'
+      }}>
+        {members.map(member => (
           <Member member={member} key={member.key}/>
         ))}
-      </div>
-      <div className="row">
-        <div className="col-lg-2 col-lg-offset-5">
-          <hr className="marginbot-50" />
-        </div>
-      </div>
-      <div className="row">
-        {members2.map(member => (
-          <Member member={member} key={member.key}/>
-        ))}
-      </div>
-      <div className="row">
-        <div className="col-lg-2 col-lg-offset-5">
-          <hr className="marginbot-50" />
-        </div>
-      </div>
-      <div className="row">
-        <Member member={lastMember} key={lastMember.key}/>
       </div>
     </div>
   </section>
