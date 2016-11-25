@@ -1,7 +1,7 @@
 import React from 'react';
-import himagelogo from '../images/himagelogo.png';
+import himagelogo from '../../images/himagelogo.png';
 
-export const NavbarHeader = () => (
+const NavbarHeader = () => (
   <div className="navbar-header page-scroll">
     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
       <i className="fa fa-bars"></i>
@@ -11,3 +11,5 @@ export const NavbarHeader = () => (
     </a>
   </div>
 );
+
+export default NavbarHeader;

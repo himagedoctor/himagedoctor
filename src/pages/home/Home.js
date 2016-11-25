@@ -3,7 +3,7 @@ import {HomeMenu} from './HomeMenu';
 import {Intro} from './Intro';
 import {About} from './About';
 import {Team} from './Team';
-import {Footer} from '../../components/Footer';
+import Footer from '../shared/Footer';
 
 class Home extends React.Component {
   componentDidMount() {

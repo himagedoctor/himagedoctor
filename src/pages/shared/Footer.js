@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../images/logo.png';
-import qrcode from '../images/qrcode.jpg';
+import logo from '../../images/logo.png';
+import qrcode from '../../images/qrcode.jpg';
 
-export const Footer = () => (
+const Footer = () => (
   <footer>
     <div className="container">
       <div className="row">
@@ -37,3 +37,5 @@ export const Footer = () => (
     </div>
   </footer>
 );
+
+export default Footer;
