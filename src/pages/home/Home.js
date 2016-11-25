@@ -1,9 +1,9 @@
 import React from 'react';
-import {HomeMenu} from '../components/HomeMenu';
-import {Intro} from '../components/Intro';
-import {About} from '../components/About';
-import {Team} from '../components/Team';
-import {Footer} from '../components/Footer';
+import {HomeMenu} from './HomeMenu';
+import {Intro} from './Intro';
+import {About} from './About';
+import {Team} from './Team';
+import {Footer} from '../../components/Footer';
 
 class Home extends React.Component {
   componentDidMount() {

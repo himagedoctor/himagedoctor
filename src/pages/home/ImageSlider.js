@@ -1,10 +1,10 @@
 import React from 'react';
 import Carousel from 'nuka-carousel';
-import himage from '../images/home/himage.jpg';
-import training from '../images/home/training.jpg';
-import clinic from '../images/home/clinic.jpg';
-import team from '../images/home/team.jpg';
-import charity from '../images/home/charity.jpg';
+import himage from '../../images/home/himage.jpg';
+import training from '../../images/home/training.jpg';
+import clinic from '../../images/home/clinic.jpg';
+import team from '../../images/home/team.jpg';
+import charity from '../../images/home/charity.jpg';
 
 class ImageSlider extends React.Component {
   render() {

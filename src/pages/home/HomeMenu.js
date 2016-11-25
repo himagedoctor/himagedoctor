@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavbarHeader} from './NavbarHeader';
+import {NavbarHeader} from '../../components/NavbarHeader';
 //? require vs import
 require('smoothscroll-polyfill').polyfill();
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import team from '../images/home/team.jpg'
+import team from '../../images/home/team.jpg'
 
 export const About = () => (
   <section id="about" className="home-section text-center bg-gray">

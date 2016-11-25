@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import {Router, Route, browserHistory} from 'react-router';
+
+import Home from './pages/home/Home';
+//pages
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'font-awesome/css/font-awesome.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={Home} />
+  </Router>
+  ), document.getElementById('root')
 );

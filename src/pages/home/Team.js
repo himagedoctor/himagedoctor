@@ -1,6 +1,5 @@
 import React from 'react';
 
-//TODO: be responsive
 const board = [
   { name: 'Peter Burgos',
     title: '常务董事',
