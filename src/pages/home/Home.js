@@ -7,7 +7,6 @@ import Footer from '../shared/Footer';
 
 class Home extends React.Component {
   componentDidMount() {
-    // change color on menu
     window.onscroll=function() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("top-nav").classList.add('top-nav-collapse');

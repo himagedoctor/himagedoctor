@@ -34,7 +34,7 @@ const Foreign = (props) => {
             <p><strong>帮助人群</strong>：养老院孤寡困难及需要帮助的老人，孤儿院的孩子，贫困人群。</p>
             <p><strong>慈善活动时间</strong>：每年一次柬埔寨活动及不定时的与国内外NGO合作进行慈善活动。</p>
             <p><strong>灾难医疗支援</strong>：在全球范围内的灾难后医疗援助工作。</p>
-            <p><strong>合作</strong>：现已和国外几家慈善机构合作进行慈善活动。如果如果有意向合作单位请填写申请表（<a href="http://119.10.57.156:8080/docs/charity_application.doc">请点击申请表下载</a>)</p>
+            <p><strong>合作</strong>：现已和国外几家慈善机构合作进行慈善活动。如果如果有意向合作单位请填写申请表（<a href="http://www.himagedoctor.com/docs/charity_application.doc">请点击申请表下载</a>)</p>
             <p><strong>新闻</strong>：2015年中我们与合作伙伴在甘肃，青海，宁夏进行医疗支援。2015-尼泊尔震后我们与合作伙伴对尼泊尔震区进行医疗援助</p>
           </div>
         </div>

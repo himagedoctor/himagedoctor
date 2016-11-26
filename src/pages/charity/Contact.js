@@ -18,7 +18,7 @@ const Contact = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-2 col-lg-offset-5">
-            <hr className="marginbot-50">
+            <hr className="marginbot-50" />
           </div>
         </div>
         <div className="row">
