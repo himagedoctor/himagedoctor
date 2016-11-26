@@ -1,11 +1,11 @@
 import React from 'react'
-import CharityNavBar from './CharityNavBar'
-import Mainland from './Mainland'
-import Foreign from './Foreign'
-import Contact from './Contact'
+import NavBar from './NavBar'
+import Mission from './Mission'
+import Visit from './Visit'
+import Insurance from './Insurance'
 import Footer from '../shared/Footer'
 
-class Charity extends React.Component {
+class Clinic extends React.Component {
   componentDidMount() {
     window.onscroll=function() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -18,14 +18,14 @@ class Charity extends React.Component {
   render() {
     return (
       <div>
-        <CharityNavBar />
-        <Mainland />
-        <Foreign />
-        <Contact />
+        <NavBar />
+        <Mission />
+        <Visit />
+        <Insurance />
         <Footer />
       </div>
     )
   }
 }
 
-export default Charity
+export default Clinic

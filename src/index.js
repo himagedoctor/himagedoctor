@@ -4,7 +4,10 @@ import {Router, Route, browserHistory} from 'react-router';
 
 import Home from './pages/home/Home';
 import Charity from './pages/charity/Charity';
-//pages
+import Clinic from './pages/clinic/Clinic';
+//? require vs import
+require('smoothscroll-polyfill').polyfill();
+
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 //import 'bootstrap/dist/css/bootstrap-theme.css';
@@ -14,6 +17,7 @@ ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={Home} />
     <Route path="/charity" component={Charity} />
+    <Route path="/clinic" component={Clinic} />
   </Router>
   ), document.getElementById('root')
 );
