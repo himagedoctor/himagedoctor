@@ -22,13 +22,13 @@ const NavBar = (props) => {
       <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
         <Nav>
           <NavItem eventKey={1} href="/">首页</NavItem>
-          <NavItem eventKey={2} href="#" onClick={
+          <NavItem eventKey={2} href="#mission" onClick={
             () => document.getElementById('mission').scrollIntoView({behavior: 'smooth'})
           }>国际门诊使命</NavItem>
-          <NavItem eventKey={3} href="#" onClick={
+          <NavItem eventKey={3} href="#visit" onClick={
             () => document.getElementById('visit').scrollIntoView({behavior: 'smooth'})
           }>就诊模式</NavItem>
-          <NavItem eventKey={4} href="#" onClick={
+          <NavItem eventKey={4} href="#insurance" onClick={
             () => document.getElementById('insurance').scrollIntoView({behavior: 'smooth'})
           }>合作保险</NavItem>
           <NavDropdown eventKey={5} title="更多信息" id="basic-nav-dropdown">

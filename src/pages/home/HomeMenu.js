@@ -12,17 +12,17 @@ export const HomeMenu = () => (
       <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul className="nav navbar-nav">
           <li>
-            <a style={{cursor: 'pointer'}} onClick={
+            <a style={{cursor: 'pointer'}} href="#intro" onClick={
               () => document.getElementById('intro').scrollIntoView({behavior: 'smooth'})
             }>首页</a>
           </li>
           <li>
-            <a style={{cursor: 'pointer'}} onClick={
+            <a style={{cursor: 'pointer'}} href="#about" onClick={
               () => document.getElementById('about').scrollIntoView({behavior: 'smooth'})
             }>关于我们</a>
           </li>
           <li>
-            <a style={{cursor: 'pointer'}} onClick={
+            <a style={{cursor: 'pointer'}} href="#team" onClick={
               () => document.getElementById('team').scrollIntoView({behavior: 'smooth'})
             }>团队介绍</a>
           </li>

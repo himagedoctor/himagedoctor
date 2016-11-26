@@ -22,13 +22,13 @@ const CharityNavBar = (props) => {
       <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
         <Nav>
           <NavItem eventKey={1} href="/">首页</NavItem>
-          <NavItem eventKey={2} href="#" onClick={
+          <NavItem eventKey={2} href="#mainland" onClick={
             () => document.getElementById('mainland').scrollIntoView({behavior: 'smooth'})
           }>国内慈善活动</NavItem>
-          <NavItem eventKey={3} href="#" onClick={
+          <NavItem eventKey={3} href="#foreign" onClick={
             () => document.getElementById('foreign').scrollIntoView({behavior: 'smooth'})
           }>国外慈善活动</NavItem>
-          <NavItem eventKey={4} href="#" onClick={
+          <NavItem eventKey={4} href="#contact" onClick={
             () => document.getElementById('contact').scrollIntoView({behavior: 'smooth'})
           }>联系方式</NavItem>
           <NavDropdown eventKey={5} title="更多信息" id="basic-nav-dropdown">
