@@ -2,9 +2,6 @@ import React from 'react';
 import NavbarHeader from '../shared/NavbarHeader';
 
 //TODO: be responsive
-/*
-          <li><a href="/training-long">全科培训</a></li>
-          */
 export const HomeMenu = () => (
   <nav className="navbar navbar-custom navbar-home navbar-fixed-top" role="navigation" id="top-nav">
     <div className="container">
@@ -26,6 +23,7 @@ export const HomeMenu = () => (
               () => document.getElementById('team').scrollIntoView({behavior: 'smooth'})
             }>团队介绍</a>
           </li>
+          <li><a href="/training-long">全科培训</a></li>
           <li><a href="/charity">慈善工作</a></li>
           <li><a href="/clinic">国际门诊</a></li>
           <li><a href="http://mail.himagedoctor.com">仁美邮箱</a></li>
