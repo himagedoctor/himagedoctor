@@ -6,6 +6,7 @@ import Home from './pages/home/Home';
 import Charity from './pages/charity/Charity';
 import Clinic from './pages/clinic/Clinic';
 import TrainingLong from './pages/training_long/TrainingLong';
+import TrainingShort from './pages/training_short/TrainingShort';
 //? require vs import
 require('smoothscroll-polyfill').polyfill();
 
@@ -20,6 +21,7 @@ ReactDOM.render((
     <Route path="/charity" component={Charity} />
     <Route path="/clinic" component={Clinic} />
     <Route path="/training-long" component={TrainingLong} />
+    <Route path="/training-short" component={TrainingShort} />
   </Router>
   ), document.getElementById('root')
 );
