@@ -9,9 +9,9 @@ class Inmed extends React.Component {
   componentDidMount() {
     window.onscroll=function() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("top-nav").classNameList.add('top-nav-collapse');
+        document.getElementById("top-nav").classList.add('top-nav-collapse');
       } else {
-        document.getElementById("top-nav").classNameList.remove('top-nav-collapse');
+        document.getElementById("top-nav").classList.remove('top-nav-collapse');
       }
     }
   }

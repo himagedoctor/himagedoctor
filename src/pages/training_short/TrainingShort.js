@@ -5,7 +5,7 @@ import Schedule from './Schedule'
 import Application from './Application'
 import Footer from '../shared/Footer'
 
-class TrainingLong extends React.Component {
+class TrainingShort extends React.Component {
   componentDidMount() {
     window.onscroll=function() {
       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -28,4 +28,4 @@ class TrainingLong extends React.Component {
   }
 }
 
-export default TrainingLong
+export default TrainingShort
