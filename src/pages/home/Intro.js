@@ -21,7 +21,7 @@ export const Intro = () => {
         <div className="row">
           <div className="col-lg-12">
             <div style={{paddingBottom: 20}}>
-              <a href="#" className="btn btn-primary disabled" style={{textTransform: 'lowercase'}} role="button">预约就诊: 400-024-7120 |
+              <a href="#" className="btn btn-primary disabled" style={{textTransform: 'lowercase'}} role="button">预约就诊: 400-0077-090 |
             clinic@himagedoctor.com</a>
             </div>
             <ImageSlider images={images}/>
