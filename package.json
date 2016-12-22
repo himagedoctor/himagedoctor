@@ -1,24 +1,11 @@
 {
   "name": "himagedoctor",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "react-scripts": "0.7.0"
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+   "start": "next start"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "font-awesome": "^4.7.0",
-    "nuka-carousel": "^2.0.3",
-    "react": "^15.4.1",
-    "react-bootstrap": "^0.30.7",
-    "react-dom": "^15.4.1",
-    "react-router": "^3.0.0",
-    "smoothscroll-polyfill": "^0.3.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "next": "^1.2.3"
   }
 }
