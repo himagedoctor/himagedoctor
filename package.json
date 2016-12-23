@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "next": "^1.2.3",
-    "react-bootstrap": "^0.30.7"
+    "nuka-carousel": "^2.0.3",
+    "react-bootstrap": "^0.30.7",
+    "smoothscroll-polyfill": "^0.3.4"
   }
 }

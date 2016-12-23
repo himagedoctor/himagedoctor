@@ -1,4 +1,5 @@
 import Head from 'next/head'
+
 export default () => (
   <header>
     <Head>
@@ -144,6 +145,57 @@ a:focus {
   outline: 0;
 }
 
+hr {
+  margin-top: 10px;
+}
+
+.marginbot-0{margin-bottom:0 !important;}
+.marginbot-10{margin-bottom:10px !important;}
+.marginbot-20{margin-bottom:20px !important;}
+.marginbot-30{margin-bottom:30px !important;}
+.marginbot-40{margin-bottom:40px !important;}
+.marginbot-50{margin-bottom:50px !important;}
+
+.home-section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  display:block;
+  position:relative;
+  z-index:120;
+}
+
+.section-heading h2 {
+	font-size: 40px;
+}
+.section-heading i {
+	margin-bottom: 20px;
+}
+
+.bg-white {
+	background: #fff;
+}
+
+.bg-gray {
+	background: #f8f8f8;
+}
+
+.bg-dark {
+	background: #575757;
+}
+
+.text-light {
+	color: #fff;
+}
+
+.service {
+  padding-top: 30px;
+}
+
+.boxed-grey {
+	background: #f9f9f9;
+	padding: 20px;
+  border-bottom: 5px solid white;
+}
 
 
       `}</style>
