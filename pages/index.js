@@ -1,9 +1,10 @@
-import React from 'react';
-import {HomeMenu} from '../components/HomeMenu';
+import React from 'react'
+//import {HomeMenu} from '../components/HomeMenu';
 //import {Intro} from './Intro';
 //import {About} from './About';
 //import {Team} from './Team';
-import Footer from '../components/Footer';
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 class Home extends React.Component {
   /*
@@ -20,7 +21,10 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        {/*
         <HomeMenu />
+        */}
+        <Header />
         <Footer />
       </div>
     );
