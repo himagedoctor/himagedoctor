@@ -3,9 +3,10 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-   "start": "next start"
+    "start": "next start"
   },
   "dependencies": {
-    "next": "^1.2.3"
+    "next": "^1.2.3",
+    "react-bootstrap": "^0.30.7"
   }
 }

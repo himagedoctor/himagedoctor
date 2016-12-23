@@ -26,7 +26,7 @@ const Footer = () => (
           <p className="text-right">
             辽ICP备15018408号－1
             <a href='http://wljg.lngs.gov.cn/iciaicweb/dzbscheck.do?method=change&id=4C80655109974FFEA24474352CD46065'>
-              <img alt='网络经济主体信息' border='0' src="/static/logo.png" />
+              <img alt='网络经济主体信息' src="/static/logo.png" />
             </a>
           </p>
         </div>

@@ -1,8 +1,8 @@
 import React from 'react'
-//import {HomeMenu} from '../components/HomeMenu';
 //import {Intro} from './Intro';
 //import {About} from './About';
 //import {Team} from './Team';
+import Menu from '../components/home/Menu'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -21,10 +21,8 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        {/*
-        <HomeMenu />
-        */}
         <Header />
+        <Menu />
         <Footer />
       </div>
     );
