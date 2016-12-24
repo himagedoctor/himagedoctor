@@ -5,6 +5,7 @@ export default () => (
     <Head>
       <title>Himage Doctor 仁美国际医疗（中国）</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
       <style>{`
         body {
@@ -48,6 +49,7 @@ a:focus {
 .navbar-brand {
   font-weight: 700;
 }
+
 .navbar-brand {
   height: 40px;
   padding: 5px 15px;
@@ -69,12 +71,16 @@ a:focus {
   background-color: rgba(255,255,255,.4);
 }
 
-.navbar.top-nav-collapse .nav.navbar-nav {
+.navbar-default {
+  background-color: rgb(255,255,255);
+}
+
+.navbar-default.top-nav-collapse .nav.navbar-nav {
   background-color: rgba(0,0,0,0);
 }
 
 
-.navbar ul.nav li a {
+.navbar-default ul.nav li a {
 	font-size: 12px;
 	letter-spacing: 1px;
   color: #444;
@@ -82,57 +88,56 @@ a:focus {
   font-weight: 700;
 }
 
-.navbar.top-nav-collapse ul.nav li a {
+.navbar-default.top-nav-collapse ul.nav li a {
  -webkit-transition: all .2s ease-in-out;
  -moz-transition: all .2s ease-in-out;
  transition: all .2s ease-in-out;
  color: #fff;
 }
 
-.navbar ul.nav ul.dropdown-menu {
+.navbar-default ul.nav ul.dropdown-menu {
  border-radius: 0;
 }
 
-.navbar ul.nav ul.dropdown-menu li {
+.navbar-default ul.nav ul.dropdown-menu li {
 	border-bottom: 1px solid #f5f5f5;
 
 }
 
-.navbar ul.nav ul.dropdown-menu li:last-child{
+.navbar-default ul.nav ul.dropdown-menu li:last-child{
 	border-bottom: none;
 }
 
-.navbar ul.nav ul.dropdown-menu li a {
+.navbar-default ul.nav ul.dropdown-menu li a {
 	padding: 10px 20px;
 }
 
-.navbar ul.nav ul.dropdown-menu li a:hover {
+.navbar-default ul.nav ul.dropdown-menu li a:hover {
 	background: #fefefe;
 }
 
-.navbar.top-nav-collapse ul.nav ul.dropdown-menu li a {
+.navbar-default.top-nav-collapse ul.nav ul.dropdown-menu li a {
 	color: #666;
 }
 
-.navbar .nav li a {
+.navbar-default .nav li a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
 
-.navbar .nav li a:hover,
-.navbar .nav li a:focus,
-.navbar .nav li.active {
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus,
+.navbar-default .nav li.active {
   outline: 0;
   background-color: rgba(255,255,255,.2);
 }
-.navbar .nav li a:hover,
-.navbar .nav li a:focus,
-.navbar .nav li.active {
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus,
+.navbar-default .nav li.active {
   outline: 0;
   background-color: rgba(255,255,255,.2);
 }
-
 
 .navbar-toggle {
   padding: 4px 6px;

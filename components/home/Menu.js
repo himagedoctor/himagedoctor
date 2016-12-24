@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {
   Navbar,
   Nav,
@@ -9,7 +10,7 @@ import {
 
 export default (props) => {
   return (
-    <Navbar collapseOnSelect fixedTop={true}>
+    <Navbar collapseOnSelect fixedTop={true} id="top-nav">
       <Navbar.Header>
         <Navbar.Brand>
           <a href="/">
@@ -29,9 +30,14 @@ export default (props) => {
           <NavItem eventKey={3} href="#team" onClick={
             () => document.getElementById('team').scrollIntoView({behavior: 'smooth'})
           }>团队介绍</NavItem>
-          <NavItem eventKey={4} href="/training-long">全科培训</NavItem>
-          <NavItem eventKey={5} href="/charity">慈善工作</NavItem>
-          <NavItem eventKey={6} href="http://mail.himagedoctor.com">仁美邮箱</NavItem>
+        <li role="presentation" key="4"><Link href="/training-long">全科培训</Link></li>
+          <li role="presentation" key="5"><Link href="/charity">慈善工作</Link></li>
+          <li role="presentation" key="6"><Link href="/http://mail.himagedoctor.com">仁美邮箱</Link></li>
+          {/*
+          <NavItem eventKey={4}><Link href="/training-long">全科培训</Link></NavItem>
+          <NavItem eventKey={5}><Link href="/charity">慈善工作</Link></NavItem>
+          <NavItem eventKey={6}><Link href="http://mail.himagedoctor.com">仁美邮箱</Link></NavItem>
+            */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

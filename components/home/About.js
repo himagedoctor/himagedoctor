@@ -8,7 +8,7 @@ export default () => (
         <div className="col-lg-8 col-lg-offset-2">
           <div className="section-heading">
             <h2>关于我们</h2>
-            <i className="fa fa-2x fa-angle-down"></i>
+            <span className="glyphicon glyphicon-chevron-down" aria-hidden="true" style={{fontSize: 40}}></span>
           </div>
         </div>
       </div>
