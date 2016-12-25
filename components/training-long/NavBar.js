@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {
   Navbar,
   Nav,
@@ -18,7 +19,7 @@ const NavBar = (props) => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <NavItem eventKey={1} href="/">首页</NavItem>
+          <li role="presentation"><Link href="/">首页</Link></li>
           <NavItem eventKey={2} href="#intro" onClick={
             () => document.getElementById('intro').scrollIntoView({behavior: 'smooth'})
           }>全科培训</NavItem>
@@ -31,7 +32,7 @@ const NavBar = (props) => {
           <NavItem eventKey={5} href="#partners" onClick={
             () => document.getElementById('partners').scrollIntoView({behavior: 'smooth'})
           }>合作医院</NavItem>
-          <NavItem eventKey={6} href="/training-short">短期培训</NavItem>
+          <li role="presentation"><Link href="/training-short">短期培训</Link></li>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

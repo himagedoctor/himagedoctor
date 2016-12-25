@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
 import ImageSlider from '../ImageSlider'
 
-const images = [
-  {original: "http://res.cloudinary.com/ds833mgxf/image/upload/v1453006670/himagedoctor/philippine.jpg", key: 1 },
-  {original: "http://res.cloudinary.com/ds833mgxf/image/upload/v1453006669/himagedoctor/pakistan.jpg", key: 2 },
-  {original: "http://res.cloudinary.com/ds833mgxf/image/upload/v1453006666/himagedoctor/cambodia.jpg", key: 3 },
-]
 
 const Foreign = (props) => {
+  const images = [
+    {original: "http://res.cloudinary.com/ds833mgxf/image/upload/v1453006670/himagedoctor/philippine.jpg", key: 1 },
+    {original: "http://res.cloudinary.com/ds833mgxf/image/upload/v1453006669/himagedoctor/pakistan.jpg", key: 2 },
+    {original: "http://res.cloudinary.com/ds833mgxf/image/upload/v1453006666/himagedoctor/cambodia.jpg", key: 3 },
+  ]
   return (
     <section id="foreign" className="home-section text-center bg-gray">
       <div className="heading-about">

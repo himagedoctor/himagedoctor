@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {
   Navbar,
   Nav,
@@ -20,7 +21,7 @@ export default (props) => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <NavItem eventKey={1} href="/">首页</NavItem>
+          <li role="presentation"><Link href="/">首页</Link></li>
           <NavItem eventKey={2} href="#mission" onClick={
             () => document.getElementById('mission').scrollIntoView({behavior: 'smooth'})
           }>国际门诊使命</NavItem>

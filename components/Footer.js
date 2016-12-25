@@ -4,7 +4,10 @@ const Footer = () => (
   <div>
   <footer>
     <div className="container">
-      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+      <div style={{
+          display: 'flex',
+          flexFlow: 'row wrap',
+          justifyContent: 'space-between'}}>
         <div style={{width: 200}}>
           <p>&copy; 仁美国际医疗（中国）</p>
           <img src="/static/qrcode.jpg" alt="himage qr code" />
