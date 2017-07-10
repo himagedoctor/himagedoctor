@@ -4,6 +4,7 @@ import Carousel from 'nuka-carousel';
 class ImageSlider extends React.Component {
   render() {
     const {images} = this.props;
+    console.log(images);
     return (
       <div>
         <Carousel>
