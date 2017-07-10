@@ -1,5 +1,6 @@
 import React from 'react'
 //
+/*
 import ins1 from '../../images/insurance/ins1.jpg'
 import ins2 from '../../images/insurance/ins2.jpg'
 import ins3 from '../../images/insurance/ins3.jpg'
@@ -24,8 +25,13 @@ import ins21 from '../../images/insurance/ins21.gif'
 import ins22 from '../../images/insurance/ins22.jpg'
 import ins23 from '../../images/insurance/ins23.jpg'
 import ins24 from '../../images/insurance/ins24.png'
+*/
 
+import axa from '../../images/insurance/axa.png'
+import erv from '../../images/insurance/erv.png'
+import medilink from '../../images/insurance/medilink.png'
 let images = [
+  /*
   {original: ins1, key: 1},
   {original: ins2, key: 2},
   {original: ins3, key: 3},
@@ -50,6 +56,10 @@ let images = [
   {original: ins22, key: 22},
   {original: ins23, key: 23},
   {original: ins24, key: 24},
+  */
+  {original: axa, key: 1},
+  {original: erv, key: 2},
+  {original: medilink, key: 3},
 ];
 /*
 for (let i = 1; i <= 6; i++) {
